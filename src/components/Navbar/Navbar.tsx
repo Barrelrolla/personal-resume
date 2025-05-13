@@ -8,12 +8,13 @@ import {
   NavbarToggle,
 } from "@barrelrolla/react-components-library";
 import { navLinks } from "../../data/navLinks";
+import cv from "../../assets/Julian_Teofilov_CV.pdf";
 
 function Navbar() {
   const path = useLocation().pathname;
   return (
     <BarrelrollaNavbar collapseAt="md">
-      <div>
+      <div className="md:w-[130px]">
         <NavbarBrand as={Link} to={"/"}>
           Julian
         </NavbarBrand>
@@ -31,7 +32,15 @@ function Navbar() {
         ))}
       </NavbarCollapse>
       <div className="flex flex-wrap items-center gap-4 md:w-[130px]">
-        <Button size="sm" color="primary">
+        <Button
+          variant="outline"
+          as={"a"}
+          href={cv}
+          download
+          target="_self"
+          size="sm"
+          color="primary"
+        >
           Download CV
         </Button>
         <NavbarToggle />

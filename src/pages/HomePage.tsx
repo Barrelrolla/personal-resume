@@ -16,7 +16,9 @@ function HomePage() {
           <HeroTitle className="text-4xl font-medium md:text-6xl xl:text-8xl">
             Julian Teofilov
           </HeroTitle>
-          <HeroText className="font-semibold">UI Developer</HeroText>
+          <HeroText className="font-semibold md:text-2xl xl:text-4xl">
+            UI Developer
+          </HeroText>
         </HeroSection>
       </Hero>
     </>

@@ -19,7 +19,7 @@ export default function Footer() {
             aria-label="GitHub link"
             href="https://github.com/barrelrolla"
           >
-            <GitHubIcon />
+            <GitHubIcon strokeWidth={12} />
           </FooterLink>
           <FooterLink
             as={"a"}
@@ -27,7 +27,7 @@ export default function Footer() {
             aria-label="LinkedIn link"
             href="https://www.linkedin.com/in/julian-teofilov/"
           >
-            <LinkedInLogo />
+            <LinkedInLogo strokeWidth={12} />
           </FooterLink>
         </FooterIconsContainer>
       </div>

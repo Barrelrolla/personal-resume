@@ -9,7 +9,7 @@ import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeContextProvider>
+    <ThemeContextProvider value={{ buttonsRetainFocus: false }}>
       <HashRouter>
         <Routes>
           <Route path="/" element={<RootLayout />}>
