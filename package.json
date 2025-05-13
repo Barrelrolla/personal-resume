@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "homepage": "https://barrelrolla.github.io/personal-resume/",
   "dependencies": {
     "@barrelrolla/react-components-library": "latest",
     "@tailwindcss/vite": "^4.0.15",
