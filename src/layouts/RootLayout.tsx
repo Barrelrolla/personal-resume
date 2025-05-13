@@ -1,0 +1,17 @@
+import { Outlet } from "react-router";
+import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
+
+function RootLayout() {
+  return (
+    <div className="flex min-h-screen flex-col pt-16">
+      <Navbar />
+      <div className="mx-auto mb-6 max-w-(--max-width) flex-1">
+        <Outlet />
+      </div>
+      <Footer />
+    </div>
+  );
+}
+
+export default RootLayout;
