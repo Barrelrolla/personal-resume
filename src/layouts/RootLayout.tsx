@@ -6,9 +6,9 @@ function RootLayout() {
   return (
     <div className="flex min-h-screen flex-col pt-16">
       <Navbar />
-      <div className="mx-auto mb-6 max-w-(--max-width) flex-1">
+      <main className="mx-auto mb-6 max-w-(--max-width) flex-1">
         <Outlet />
-      </div>
+      </main>
       <Footer />
     </div>
   );
