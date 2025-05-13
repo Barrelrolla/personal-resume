@@ -9,6 +9,10 @@
   scrollbar-width: thin;
 }
 
+.height-hero {
+  @apply h-[400px] md:h-[600px] xl:h-[800px]
+}
+
 :root {
   --color-main: #dad6cf;
   --color-main-content: #4c5c5a;

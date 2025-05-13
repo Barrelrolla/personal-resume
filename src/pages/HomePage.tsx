@@ -4,12 +4,24 @@ import {
   HeroText,
   HeroTitle,
 } from "@barrelrolla/react-components-library";
+// import rain from "../assets/rain.mp4";
+import blob from "../assets/blob.mp4";
 
 function HomePage() {
   return (
     <>
+      <div className="bg-main height-hero pointer-events-none absolute top-0 left-0 -z-5 w-full mix-blend-color"></div>
+      <div className="from-main height-hero pointer-events-none absolute top-0 left-0 -z-4 w-full bg-gradient-to-t to-transparent to-20%"></div>
+      <video
+        className="height-hero absolute top-0 left-0 -z-10 w-full object-cover brightness-25 contrast-75 not-dark:invert dark:brightness-50 dark:contrast-50 dark:sepia"
+        src={blob}
+        muted
+        loop
+        autoPlay
+      ></video>
       <Hero
-        className="h-[400px] font-serif md:h-[600px] xl:h-[800px]"
+        className="height-hero font-serif"
+        wrapperClasses="bg-transparent"
         textAlign="center"
       >
         <HeroSection>
