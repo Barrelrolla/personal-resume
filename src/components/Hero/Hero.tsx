@@ -11,10 +11,10 @@ export default function Hero() {
     <BarrelrollaHero className="height-hero font-serif" textAlign="center">
       <HeroSection>
         <Ring />
-        <HeroTitle className="text-4xl font-medium sm:text-6xl xl:text-8xl relative z-10 hero-text-shadow">
+        <HeroTitle className="text-4xl font-medium sm:text-6xl xl:text-8xl relative z-1 hero-text-shadow">
           Julian Teofilov
         </HeroTitle>
-        <HeroText className="font-semibold sm:text-2xl xl:text-4xl relative z-10">
+        <HeroText className="font-semibold sm:text-2xl xl:text-4xl relative z-1">
           UI Developer
         </HeroText>
       </HeroSection>

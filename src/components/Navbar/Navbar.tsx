@@ -19,7 +19,7 @@ export default function Navbar() {
           Julian
         </NavbarBrand>
       </div>
-      <NavbarCollapse>
+      <NavbarCollapse className="md:space-x-6">
         {navLinks.map((link) => (
           <NavbarLink
             key={link.path}

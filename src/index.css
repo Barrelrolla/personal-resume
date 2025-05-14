@@ -115,7 +115,17 @@
   }
 }
 
+.hero-ring {
+  box-shadow:
+    var(--ring-offset-x) 0px var(--ring-blur) calc(var(--ring-blur) / 4),
+    calc(var(--ring-offset-x) * -1) 0px var(--ring-blur) calc(var(--ring-blur) / 4);
+}
+
 .hero-text-shadow {
   --blur: calc(var(--ring-blur) / 2);
-  text-shadow: 1px 1px var(--blur) var(--color-main), -1px -1px var(--blur) var(--color-main), -1px 1px var(--blur) var(--color-main), 1px -1px var(--blur) var(--color-main);
+  text-shadow:
+    1px 1px var(--blur) var(--color-main),
+    -1px -1px var(--blur) var(--color-main),
+    -1px 1px var(--blur) var(--color-main),
+    1px -1px var(--blur) var(--color-main);
 }
