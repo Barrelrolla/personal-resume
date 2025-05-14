@@ -18,7 +18,7 @@
   --color-main-content: #4c5c5a;
   --color-primary: #4c5c5a;
   --color-primary-content: #dad6cf;
-  --default-font-weight: 400;
+  --default-font-weight: 300;
   --radius-navigation: 0;
   --border-navigation: 1px;
   scrollbar-gutter: stable;
@@ -113,4 +113,9 @@
   100% {
     rotate: 360deg;
   }
+}
+
+.hero-text-shadow {
+  --blur: calc(var(--ring-blur) / 2);
+  text-shadow: 1px 1px var(--blur) var(--color-main), -1px -1px var(--blur) var(--color-main), -1px 1px var(--blur) var(--color-main), 1px -1px var(--blur) var(--color-main);
 }

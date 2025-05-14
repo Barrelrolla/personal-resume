@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <BarrelrollaNavbar collapseAt="md">
       <div className="md:w-[130px]">
-        <NavbarBrand as={Link} className="w-min" to={"/"}>
+        <NavbarBrand as={Link} className="w-min font-medium" to={"/"}>
           Julian
         </NavbarBrand>
       </div>
