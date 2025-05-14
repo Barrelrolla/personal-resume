@@ -1,16 +1,20 @@
 import {
   Anchor,
   Footer as BarrelrollaFooter,
+  CoffeeIcon,
   DarkModeSelector,
   FooterDivider,
   FooterIconsContainer,
   FooterLink,
   GitHubIcon,
   HeartFillIcon,
-  LinkedInLogo,
+  LetterIcon,
+  LinkedInIcon,
+  PhoneIcon,
 } from "@barrelrolla/react-components-library";
 
 export default function Footer() {
+  const iconsWidth = 10;
   return (
     <BarrelrollaFooter color="main" decorations>
       <div className="flex w-full items-center justify-between pt-2">
@@ -21,21 +25,36 @@ export default function Footer() {
             aria-label="GitHub link"
             href="https://github.com/barrelrolla"
           >
-            <GitHubIcon strokeWidth={10} />
+            <GitHubIcon strokeWidth={iconsWidth} />
           </FooterLink>
           <FooterLink
             target="_blank"
             aria-label="LinkedIn link"
             href="https://www.linkedin.com/in/julian-teofilov/"
           >
-            <LinkedInLogo strokeWidth={10} />
+            <LinkedInIcon strokeWidth={iconsWidth} />
+          </FooterLink>
+          <FooterLink
+            target="_blank"
+            aria-label="email link"
+            href="mailto:julian.teofilov@gmail.com"
+          >
+            <LetterIcon strokeWidth={iconsWidth} />
+          </FooterLink>
+          <FooterLink
+            target="_blank"
+            aria-label="phone number link"
+            href="tel:+359888971167"
+          >
+            <PhoneIcon strokeWidth={iconsWidth} />
           </FooterLink>
         </FooterIconsContainer>
       </div>
       <FooterDivider />
       <div className="flex w-full flex-col items-center text-center">
         <span className="flex items-center gap-1">
-          Made with <HeartFillIcon className="inline" /> and coffee
+          Made with <HeartFillIcon className="inline" /> and{" "}
+          <CoffeeIcon className="inline" />
         </span>
         <span>
           Icons by:{" "}
