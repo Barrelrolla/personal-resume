@@ -17,20 +17,18 @@ export default function Footer() {
         <DarkModeSelector />
         <FooterIconsContainer>
           <FooterLink
-            as={"a"}
             target="_blank"
             aria-label="GitHub link"
             href="https://github.com/barrelrolla"
           >
-            <GitHubIcon strokeWidth={12} />
+            <GitHubIcon strokeWidth={10} />
           </FooterLink>
           <FooterLink
-            as={"a"}
             target="_blank"
             aria-label="LinkedIn link"
             href="https://www.linkedin.com/in/julian-teofilov/"
           >
-            <LinkedInLogo strokeWidth={12} />
+            <LinkedInLogo strokeWidth={10} />
           </FooterLink>
         </FooterIconsContainer>
       </div>
@@ -45,12 +43,12 @@ export default function Footer() {
             phosphoricons
           </Anchor>
         </span>
-        <span>
+        {/* <span>
           Background video by:{" "}
           <Anchor href="https://www.pexels.com/@rostislav/" target="_blank">
             @rostislav
           </Anchor>
-        </span>
+        </span> */}
       </div>
     </BarrelrollaFooter>
   );

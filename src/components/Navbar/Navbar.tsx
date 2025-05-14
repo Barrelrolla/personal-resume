@@ -10,7 +10,7 @@ import {
 import { navLinks } from "../../data/navLinks";
 import cv from "../../assets/Julian_Teofilov_CV.pdf";
 
-function Navbar() {
+export default function Navbar() {
   const path = useLocation().pathname;
   return (
     <BarrelrollaNavbar collapseAt="md">
@@ -48,5 +48,3 @@ function Navbar() {
     </BarrelrollaNavbar>
   );
 }
-
-export default Navbar;

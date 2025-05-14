@@ -1,5 +1,3 @@
-function EducationPage() {
+export default function EducationPage() {
   return <div>Education Page</div>;
 }
-
-export default EducationPage;

@@ -1,4 +1,4 @@
-function Demos() {
+export default function Demos() {
   return (
     <>
       <div className="flex gap-4 bg-white p-10 text-xl font-bold dark:bg-black">
@@ -43,5 +43,3 @@ function Demos() {
     </>
   );
 }
-
-export default Demos;

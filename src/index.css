@@ -10,7 +10,7 @@
 }
 
 .height-hero {
-  @apply h-[400px] md:h-[600px] xl:h-[800px]
+  @apply h-[400px] sm:h-[600px] xl:h-[800px]
 }
 
 :root {

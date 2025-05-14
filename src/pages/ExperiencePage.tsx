@@ -1,5 +1,3 @@
-function ExperiencePage() {
+export default function ExperiencePage() {
   return <div>Experinece Page</div>;
 }
-
-export default ExperiencePage;
