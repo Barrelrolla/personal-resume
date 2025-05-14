@@ -1,4 +1,3 @@
-import Demos from "../demos/demos";
 import ContactsPage from "../pages/ContactsPage";
 import EducationPage from "../pages/EducationPage";
 import ExperiencePage from "../pages/ExperiencePage";
@@ -9,5 +8,4 @@ export const navLinks = [
   { path: "education", element: EducationPage },
   { path: "projects", element: ProjectsPage },
   { path: "contacts", element: ContactsPage },
-  { path: "demos", element: Demos },
 ];

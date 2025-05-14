@@ -22,6 +22,36 @@
   --radius-navigation: 0;
   --border-navigation: 1px;
   scrollbar-gutter: stable;
+  --ring-offset-x: 10px;
+  --ring-blur: 10px;
+}
+
+@media (width >=40rem) {
+  :root {
+    --ring-offset-x: 15px;
+    --ring-blur: 15px;
+  }
+}
+
+/* @media (width >=48rem) {
+  :root {
+    --ring-offset-x: 10px;
+    --ring-blur: 10px;
+  }
+}
+
+@media (width >=64rem) {
+  :root {
+    --ring-offset-x: 15px;
+    --ring-blur: 15px;
+  }
+} */
+
+@media (width >=80rem) {
+  :root {
+    --ring-offset-x: 20px;
+    --ring-blur: 20px;
+  }
 }
 
 .dark {
@@ -73,4 +103,14 @@
 
 .reversed-colors-nobg {
   @apply text-secondary-200 dark:text-primary-600
+}
+
+.animate-slow-spin {
+  animation: slow-spin 10s linear infinite;
+}
+
+@keyframes slow-spin {
+  100% {
+    rotate: 360deg;
+  }
 }
