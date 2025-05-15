@@ -7,7 +7,7 @@ export default function HomePage() {
 
   useEffect(() => {
     function scrollHandler() {
-      buttonRef.current?.classList.add("hidden");
+      buttonRef.current?.classList.add("animate-fade-out");
     }
     window.addEventListener("scroll", scrollHandler);
 
@@ -18,16 +18,21 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="h-[calc(100vh-50px)]">
+      <section className="min-h-[calc(100vh-50px)]">
         <Hero />
       </section>
       <Button
         ref={buttonRef}
+        aria-label="scroll down"
         variant="outline"
         radius="pill"
         size="xl"
         startIcon={<CaretIcon />}
-        wrapperClasses="absolute bottom-10 animate-bounce left-[calc(50%-20px)]"
+        wrapperClasses="absolute bottom-10 animate-bounce left-[calc(50%-28px)]"
+        onClick={() => {
+          buttonRef.current?.classList.add("animate-fade-out");
+          scrollBy(0, 300);
+        }}
       ></Button>
     </>
   );

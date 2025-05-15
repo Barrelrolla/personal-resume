@@ -129,3 +129,18 @@
     -1px 1px var(--blur) var(--color-main),
     1px -1px var(--blur) var(--color-main);
 }
+
+.animate-fade-out {
+  animation: fade-out 300ms linear forwards
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
+    display: none;
+  }
+}
