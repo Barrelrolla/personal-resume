@@ -9,5 +9,3 @@ export const navLinks = [
   { path: "projects", element: ProjectsPage },
   { path: "contacts", element: ContactsPage },
 ];
-
-export const rootPath = "/personal-resume/";

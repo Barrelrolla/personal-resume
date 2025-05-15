@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import {
-  createBrowserRouter,
+  createHashRouter,
   NonIndexRouteObject,
   RouterProvider,
 } from "react-router";
@@ -10,7 +10,7 @@ import HomePage from "./pages/HomePage";
 import RootLayout from "./layouts/RootLayout";
 import NotFound from "./pages/NotFound";
 import ErrorPage from "./pages/ErrorPage";
-import { navLinks, rootPath } from "./data/navLinks";
+import { navLinks } from "./data/navLinks";
 import "./index.css";
 
 const navRoutes: NonIndexRouteObject[] = navLinks.map((link) => {
@@ -20,9 +20,9 @@ const navRoutes: NonIndexRouteObject[] = navLinks.map((link) => {
     ErrorBoundary: ErrorPage,
   };
 });
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: rootPath,
+    path: "/",
     Component: RootLayout,
     ErrorBoundary: ErrorPage,
     children: [
