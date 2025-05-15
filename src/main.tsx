@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import {
-  createHashRouter,
+  createBrowserRouter,
   NonIndexRouteObject,
   RouterProvider,
 } from "react-router";
@@ -16,7 +16,7 @@ import "./index.css";
 const navRoutes: NonIndexRouteObject[] = navLinks.map((link) => {
   return { path: link.path, Component: link.element, ErrorBoundary: ErrorPage };
 });
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     Component: RootLayout,
