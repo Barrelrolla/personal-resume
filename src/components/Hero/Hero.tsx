@@ -27,14 +27,11 @@ export default function Hero() {
       </HeroSection>
       <HeroSection className="font-sans flex-1/2 max-md:justify-start">
         <HeroText className="text-balance">
-          I am a UI developer with 8 years of experience. I'm experienced both
-          in front-end web development and video games UI. I possess a diverse
-          skillset of working with different programming languages, frameworks
-          and game engines, such as C++, C#, JavaScript, TypeScript, React,
-          Phaser, Unity 3D and multiple proprietary game engines. I have the
-          ability to work not only in a small team, but also in a big
-          international team creating AAA games as The Division 2 and multiple
-          Assassin's Creed titles.
+          I'm a UI developer with 8 years of experience in front-end web and
+          video game UI development. Skilled in C++, C#, JavaScript, TypeScript,
+          React, Unity, Phaser, and proprietary game engines. I've contributed
+          to AAA titles like The Division 2 and multiple Assassin's Creed games,
+          working in both small teams and large international studios.
         </HeroText>
         <HeroActions>
           <Button as={Link} to="/projects" className="w-[145px]">
