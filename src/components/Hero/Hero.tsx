@@ -16,7 +16,7 @@ export default function Hero() {
       className="height-hero -mt-20 font-serif gap-6"
       textAlign="responsive"
     >
-      <HeroSection className="flex-1/2 items-center">
+      <HeroSection className="flex-1/2 items-center md:order-last">
         <Ring />
         <HeroTitle className="text-4xl font-medium sm:text-6xl xl:text-8xl relative z-1 hero-text-shadow md:max-w-[500px] text-center">
           Julian Teofilov

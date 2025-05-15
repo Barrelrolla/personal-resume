@@ -1,18 +1,27 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button, CaretIcon } from "@barrelrolla/react-components-library";
 import Hero from "../components/Hero/Hero";
 
 export default function HomePage() {
+  const [needButton, setNeedButton] = useState(
+    window.innerHeight > 400 && window.innerWidth > 400,
+  );
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     function scrollHandler() {
       buttonRef.current?.classList.add("animate-fade-out");
     }
+    function resizeHandler() {
+      setNeedButton(window.innerHeight > 400 && window.innerWidth > 400);
+    }
+
     window.addEventListener("scroll", scrollHandler);
+    window.addEventListener("resize", resizeHandler);
 
     return () => {
       window.removeEventListener("scroll", scrollHandler);
+      window.removeEventListener("resize", resizeHandler);
     };
   }, []);
 
@@ -21,7 +30,7 @@ export default function HomePage() {
       <section className="p-4">
         <Hero />
       </section>
-      {window.innerHeight > 400 && window.innerWidth > 400 && (
+      {needButton && (
         <Button
           ref={buttonRef}
           aria-label="scroll down"
