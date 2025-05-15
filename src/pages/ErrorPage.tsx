@@ -1,11 +1,12 @@
 import { Anchor } from "@barrelrolla/react-components-library";
 import { Link, useRouteError } from "react-router";
+import PageTitle from "../components/ui/PageTitle";
 
 export default function ErrorPage() {
   const error = useRouteError();
   return (
     <main className="text-center px-4 pt-40">
-      <h1 className="text-6xl font-normal">Oooops! Something went wrong!</h1>
+      <PageTitle>Oooops! Something went wrong!</PageTitle>
       <p className="mt-8">{error instanceof Error ? error.message : ""}</p>
       <p className="mt-8">
         Please try again later or go back to the{" "}

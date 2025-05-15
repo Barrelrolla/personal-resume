@@ -27,7 +27,7 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="p-4 overflow-x-clip">
+      <section className="justify-self-center">
         <Hero />
       </section>
       {needButton && (

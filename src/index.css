@@ -85,22 +85,6 @@
   --color-primary-900: #1e2423;
 }
 
-.colored {
-  @apply bg-secondary-200 text-primary-600 dark:bg-primary-600 dark:text-secondary-200
-}
-
-.colored-nobg {
-  @apply text-primary-600 dark:text-secondary-200
-}
-
-.reversed-colors {
-  @apply bg-primary-600 text-secondary-200 dark:bg-secondary-200 dark:text-primary-600
-}
-
-.reversed-colors-nobg {
-  @apply text-secondary-200 dark:text-primary-600
-}
-
 .animate-slow-spin {
   animation: slow-spin 8s linear infinite;
 }
@@ -108,6 +92,12 @@
 @keyframes slow-spin {
   100% {
     rotate: 360deg;
+  }
+}
+
+@utility grid-left {
+  p {
+    text-align: end;
   }
 }
 
