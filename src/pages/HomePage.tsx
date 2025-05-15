@@ -18,22 +18,24 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="min-h-[calc(100vh-50px)]">
+      <section className="p-4">
         <Hero />
       </section>
-      <Button
-        ref={buttonRef}
-        aria-label="scroll down"
-        variant="outline"
-        radius="pill"
-        size="xl"
-        startIcon={<CaretIcon />}
-        wrapperClasses="absolute bottom-10 animate-bounce left-[calc(50%-28px)]"
-        onClick={() => {
-          buttonRef.current?.classList.add("animate-fade-out");
-          scrollBy({ top: 300, behavior: "smooth" });
-        }}
-      ></Button>
+      {window.innerHeight > 400 && window.innerWidth > 400 && (
+        <Button
+          ref={buttonRef}
+          aria-label="scroll down"
+          variant="outline"
+          radius="pill"
+          size="xl"
+          startIcon={<CaretIcon />}
+          wrapperClasses="absolute bottom-4 animate-bounce left-[calc(50%-28px)]"
+          onClick={() => {
+            buttonRef.current?.classList.add("animate-fade-out");
+            scrollBy({ top: 300, behavior: "smooth" });
+          }}
+        ></Button>
+      )}
     </>
   );
 }

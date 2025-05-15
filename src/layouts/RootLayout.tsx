@@ -6,7 +6,7 @@ export default function RootLayout() {
   return (
     <div className="flex min-h-screen flex-col pt-16">
       <Navbar />
-      <main className="mx-auto mb-6 max-w-(--max-width) flex-1 overflow-hidden">
+      <main className="mx-auto mb-6 max-w-(--max-width) flex-1">
         <Outlet />
       </main>
       <Footer />

@@ -9,10 +9,6 @@
   scrollbar-width: thin;
 }
 
-.height-hero {
-  @apply h-[400px] sm:h-[600px] xl:h-[800px]
-}
-
 :root {
   --color-main: #dad6cf;
   --color-main-content: #4c5c5a;
@@ -113,6 +109,10 @@
   100% {
     rotate: 360deg;
   }
+}
+
+.height-hero {
+  @apply h-screen min-h-[400px]
 }
 
 .hero-ring {
