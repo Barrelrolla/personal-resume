@@ -2,7 +2,6 @@ import {
   Anchor,
   Footer as BarrelrollaFooter,
   CoffeeFillIcon,
-  CoffeeIcon,
   DarkModeSelector,
   FooterDivider,
   FooterIconsContainer,
