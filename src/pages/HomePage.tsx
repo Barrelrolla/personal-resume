@@ -31,7 +31,7 @@ export default function HomePage() {
         wrapperClasses="absolute bottom-10 animate-bounce left-[calc(50%-28px)]"
         onClick={() => {
           buttonRef.current?.classList.add("animate-fade-out");
-          scrollBy(0, 300);
+          scrollBy({ top: 300, behavior: "smooth" });
         }}
       ></Button>
     </>
