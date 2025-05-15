@@ -10,15 +10,19 @@ import HomePage from "./pages/HomePage";
 import RootLayout from "./layouts/RootLayout";
 import NotFound from "./pages/NotFound";
 import ErrorPage from "./pages/ErrorPage";
-import { navLinks } from "./data/navLinks";
+import { navLinks, rootPath } from "./data/navLinks";
 import "./index.css";
 
 const navRoutes: NonIndexRouteObject[] = navLinks.map((link) => {
-  return { path: link.path, Component: link.element, ErrorBoundary: ErrorPage };
+  return {
+    path: link.path,
+    Component: link.element,
+    ErrorBoundary: ErrorPage,
+  };
 });
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: rootPath,
     Component: RootLayout,
     ErrorBoundary: ErrorPage,
     children: [

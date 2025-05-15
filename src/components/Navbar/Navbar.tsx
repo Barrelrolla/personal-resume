@@ -7,7 +7,7 @@ import {
   NavbarLink,
   NavbarToggle,
 } from "@barrelrolla/react-components-library";
-import { navLinks } from "../../data/navLinks";
+import { navLinks, rootPath } from "../../data/navLinks";
 import cv from "../../assets/Julian_Teofilov_CV.pdf";
 
 export default function Navbar() {
@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <BarrelrollaNavbar collapseAt="md">
       <div className="md:w-[130px]">
-        <NavbarBrand as={Link} className="w-min font-medium" to={"/"}>
+        <NavbarBrand as={Link} className="w-min font-medium" to={rootPath}>
           Julian
         </NavbarBrand>
       </div>
@@ -24,7 +24,7 @@ export default function Navbar() {
           <NavbarLink
             key={link.path}
             as={Link}
-            to={`/${link.path}`}
+            to={`${rootPath}${link.path}`}
             data-selected={path === `/${link.path}`}
           >
             {link.path}
