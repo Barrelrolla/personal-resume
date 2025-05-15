@@ -22,35 +22,35 @@
   --radius-navigation: 0;
   --border-navigation: 1px;
   scrollbar-gutter: stable;
-  --ring-offset-x: 10px;
-  --ring-blur: 10px;
+  --ring-offset: 8px;
+  --ring-blur: 20px;
 }
 
 @media (width >=40rem) {
   :root {
-    --ring-offset-x: 15px;
-    --ring-blur: 15px;
+    --ring-offset: 12px;
+    --ring-blur: 30px;
   }
 }
 
 /* @media (width >=48rem) {
   :root {
-    --ring-offset-x: 10px;
+    --ring-offset: 10px;
     --ring-blur: 10px;
   }
 }
 
 @media (width >=64rem) {
   :root {
-    --ring-offset-x: 15px;
+    --ring-offset: 15px;
     --ring-blur: 15px;
   }
 } */
 
 @media (width >=80rem) {
   :root {
-    --ring-offset-x: 20px;
-    --ring-blur: 20px;
+    --ring-offset: 16px;
+    --ring-blur: 40px;
   }
 }
 
@@ -106,7 +106,7 @@
 }
 
 .animate-slow-spin {
-  animation: slow-spin 10s linear infinite;
+  animation: slow-spin 8s linear infinite;
 }
 
 @keyframes slow-spin {
@@ -117,12 +117,12 @@
 
 .hero-ring {
   box-shadow:
-    var(--ring-offset-x) 0px var(--ring-blur) calc(var(--ring-blur) / 4),
-    calc(var(--ring-offset-x) * -1) 0px var(--ring-blur) calc(var(--ring-blur) / 4);
+    var(--ring-offset) calc(var(--ring-offset) * -1) var(--ring-blur),
+    calc(var(--ring-offset) * -1) var(--ring-offset) var(--ring-blur);
 }
 
 .hero-text-shadow {
-  --blur: calc(var(--ring-blur) / 2);
+  --blur: calc(var(--ring-blur) / 4);
   text-shadow:
     1px 1px var(--blur) var(--color-main),
     -1px -1px var(--blur) var(--color-main),
