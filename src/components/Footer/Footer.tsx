@@ -1,6 +1,7 @@
 import {
   Anchor,
   Footer as BarrelrollaFooter,
+  CoffeeFillIcon,
   CoffeeIcon,
   DarkModeSelector,
   FooterDivider,
@@ -54,7 +55,7 @@ export default function Footer() {
       <div className="flex w-full flex-col items-center text-center">
         <span className="flex items-center gap-1">
           Made with <HeartFillIcon className="inline" /> and{" "}
-          <CoffeeIcon className="inline" />
+          <CoffeeFillIcon className="inline" />
         </span>
         <span>
           Icons by:{" "}
@@ -62,12 +63,6 @@ export default function Footer() {
             phosphoricons
           </Anchor>
         </span>
-        {/* <span>
-          Background video by:{" "}
-          <Anchor href="https://www.pexels.com/@rostislav/" target="_blank">
-            @rostislav
-          </Anchor>
-        </span> */}
       </div>
     </BarrelrollaFooter>
   );
