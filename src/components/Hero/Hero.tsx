@@ -26,13 +26,13 @@ export default function Hero() {
         </HeroText>
       </HeroSection>
       <HeroSection className="font-sans flex-1/2 max-md:justify-start">
-        <HeroText className="text-balance">
+        <p className="text-pretty">
           I'm a UI developer with 8 years of experience in front-end web and
           video game UI development. Skilled in C++, C#, JavaScript, TypeScript,
           React, Unity, Phaser, and proprietary game engines. I've contributed
           to AAA titles like The Division 2 and multiple Assassin's Creed games,
           working in both small teams and large international studios.
-        </HeroText>
+        </p>
         <HeroActions>
           <Button as={Link} to="/projects" className="w-[145px]">
             My projects
