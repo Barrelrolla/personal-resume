@@ -16,7 +16,7 @@ export default function Hero() {
       className="height-hero -mt-20 font-serif gap-6"
       textAlign="responsive"
     >
-      <HeroSection className="flex-1/2 items-center md:order-last">
+      <HeroSection className="flex-1/2 items-center md:order-last overflow-x-visible relative">
         <Ring />
         <HeroTitle className="text-4xl font-medium sm:text-6xl xl:text-8xl relative z-1 hero-text-shadow md:max-w-[500px] text-center">
           Julian Teofilov
@@ -33,7 +33,7 @@ export default function Hero() {
           to AAA titles like The Division 2 and multiple Assassin's Creed games,
           working in both small teams and large international studios.
         </p>
-        <HeroActions>
+        <HeroActions className="gap-2 justify-around">
           <Button as={Link} to="/projects" className="w-[145px]">
             My projects
           </Button>

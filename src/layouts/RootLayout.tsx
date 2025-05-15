@@ -4,7 +4,7 @@ import Footer from "../components/Footer/Footer";
 
 export default function RootLayout() {
   return (
-    <div className="flex min-h-screen flex-col pt-16">
+    <div className="flex min-h-screen flex-col pt-16 overflow-x-hidden">
       <Navbar />
       <main className="mx-auto mb-6 max-w-(--max-width) flex-1">
         <Outlet />

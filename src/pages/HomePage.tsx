@@ -27,7 +27,7 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="p-4">
+      <section className="p-4 overflow-x-clip">
         <Hero />
       </section>
       {needButton && (
@@ -40,7 +40,7 @@ export default function HomePage() {
           startIcon={<CaretIcon />}
           wrapperClasses="absolute bottom-4 animate-bounce left-[calc(50%-28px)]"
           onClick={() => {
-            buttonRef.current?.classList.add("animate-fade-out");
+            buttonRef.current?.parentElement?.classList.add("animate-fade-out");
             scrollBy({ top: 300, behavior: "smooth" });
           }}
         ></Button>
