@@ -5,7 +5,7 @@ import PageTitle from "../components/ui/PageTitle";
 export default function ErrorPage() {
   const error = useRouteError();
   return (
-    <main className="text-center px-4 pt-40">
+    <div className="text-center px-4 pt-40">
       <PageTitle>Oooops! Something went wrong!</PageTitle>
       <p className="mt-8">{error instanceof Error ? error.message : ""}</p>
       <p className="mt-8">
@@ -14,6 +14,6 @@ export default function ErrorPage() {
           Home Page
         </Anchor>
       </p>
-    </main>
+    </div>
   );
 }

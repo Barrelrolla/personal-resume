@@ -1,3 +1,10 @@
+import Projects from "../components/Content/Projects";
+import BasePage from "../components/Page/BasePage";
+
 export default function ProjectsPage() {
-  return <div>Projects page</div>;
+  return (
+    <BasePage>
+      <Projects />
+    </BasePage>
+  );
 }

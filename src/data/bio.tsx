@@ -1,7 +1,40 @@
-import ubiLogo from "../assets/ubisoft.logo.avif";
+import ubiLogo from "../assets/ubisoft_logo.avif";
 import melonLogo from "../assets/melon_logo.svg";
+import {
+  GitHubIcon,
+  LetterIcon,
+  LinkedInIcon,
+  PhoneIcon,
+} from "@barrelrolla/react-components-library";
 
-export type ExperienceData = {
+export const contacts = [
+  {
+    title: "Github",
+    url: "https://github.com/barrelrolla",
+    text: "github.com/barrelrolla",
+    icon: GitHubIcon,
+  },
+  {
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/julian-teofilov/",
+    text: "linkedin.com/in/julian-teofilov/",
+    icon: LinkedInIcon,
+  },
+  {
+    title: "Email",
+    url: "mailto:julian.teofilov@gmail.com",
+    text: "julian.teofilov@gmail.com",
+    icon: LetterIcon,
+  },
+  {
+    title: "Phone",
+    url: "tel:+359888971167",
+    text: "+359 888 971167",
+    icon: PhoneIcon,
+  },
+];
+
+type ExperienceType = {
   img: string;
   title: string;
   specialty: string;
@@ -13,7 +46,7 @@ export type ExperienceData = {
   logoPadding?: string;
 };
 
-export const experienceData: ExperienceData[] = [
+export const experienceData: ExperienceType[] = [
   {
     img: ubiLogo,
     title: "Ubisoft",

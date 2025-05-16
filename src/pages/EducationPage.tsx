@@ -1,3 +1,10 @@
+import Education from "../components/Content/Education";
+import BasePage from "../components/Page/BasePage";
+
 export default function EducationPage() {
-  return <div>Education Page</div>;
+  return (
+    <BasePage>
+      <Education />
+    </BasePage>
+  );
 }

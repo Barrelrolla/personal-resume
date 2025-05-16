@@ -4,7 +4,7 @@ import PageTitle from "../components/ui/PageTitle";
 
 export default function NotFound() {
   return (
-    <main className="text-center px-4 pt-40">
+    <div className="text-center px-4 pt-40">
       <PageTitle>Page not found!</PageTitle>
       <p className="mt-8">
         Please verify the URL you're trying to access or go back to the{" "}
@@ -12,6 +12,6 @@ export default function NotFound() {
           Home Page
         </Anchor>
       </p>
-    </main>
+    </div>
   );
 }

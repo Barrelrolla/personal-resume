@@ -1,21 +1,30 @@
 import { useEffect, useRef, useState } from "react";
 import { Button, CaretIcon } from "@barrelrolla/react-components-library";
+import Experience from "../components/Content/Experience";
 import Hero from "../components/Hero/Hero";
-import ExperiencePage from "./ExperiencePage";
 
 export default function HomePage() {
-  const [needButton, setNeedButton] = useState(
-    window.innerHeight > 400 && window.innerWidth > 400,
-  );
+  function checkNeedButton() {
+    const innerHeight = window.innerHeight;
+    let overMin = false;
+
+    if (innerHeight > window.innerWidth) {
+      overMin = innerHeight > 650;
+    } else {
+      overMin = innerHeight > 450;
+    }
+    return overMin && innerHeight < 1050;
+  }
+  const [needButton, setNeedButton] = useState(checkNeedButton());
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const expRef = useRef<HTMLDivElement>(null);
+  const bioRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     function scrollHandler() {
       buttonRef.current?.classList.add("animate-fade-out");
     }
     function resizeHandler() {
-      setNeedButton(window.innerHeight > 400 && window.innerWidth > 400);
+      setNeedButton(checkNeedButton());
     }
 
     window.addEventListener("scroll", scrollHandler);
@@ -41,13 +50,15 @@ export default function HomePage() {
           wrapperClasses="absolute bottom-4 animate-bounce left-[calc(50%-28px)]"
           onClick={() => {
             buttonRef.current?.parentElement?.classList.add("animate-fade-out");
-            expRef.current?.scrollIntoView({
+            bioRef.current?.scrollIntoView({
               behavior: "smooth",
             });
           }}
         ></Button>
       )}
-      <ExperiencePage style={{ scrollMargin: "60px" }} ref={expRef} />
+      <section ref={bioRef} style={{ scrollMargin: "60px" }}>
+        <Experience />
+      </section>
     </div>
   );
 }
