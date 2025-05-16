@@ -13,7 +13,7 @@ import cv from "../../assets/Julian_Teofilov_CV.pdf";
 export default function Navbar() {
   const path = useLocation().pathname;
   return (
-    <BarrelrollaNavbar collapseAt="md">
+    <BarrelrollaNavbar collapseAt="md" className="z-20">
       <div className="md:w-[130px]">
         <NavbarBrand as={Link} className="w-min font-medium" to={"/"}>
           Julian

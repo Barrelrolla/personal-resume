@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { Button, CaretIcon } from "@barrelrolla/react-components-library";
 import Hero from "../components/Hero/Hero";
+import ExperiencePage from "./ExperiencePage";
 
 export default function HomePage() {
   const [needButton, setNeedButton] = useState(
     window.innerHeight > 400 && window.innerWidth > 400,
   );
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const expRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function scrollHandler() {
@@ -26,10 +28,8 @@ export default function HomePage() {
   }, []);
 
   return (
-    <>
-      <section className="justify-self-center">
-        <Hero />
-      </section>
+    <div className="justify-self-center">
+      <Hero />
       {needButton && (
         <Button
           ref={buttonRef}
@@ -41,10 +41,13 @@ export default function HomePage() {
           wrapperClasses="absolute bottom-4 animate-bounce left-[calc(50%-28px)]"
           onClick={() => {
             buttonRef.current?.parentElement?.classList.add("animate-fade-out");
-            scrollBy({ top: 300, behavior: "smooth" });
+            expRef.current?.scrollIntoView({
+              behavior: "smooth",
+            });
           }}
         ></Button>
       )}
-    </>
+      <ExperiencePage style={{ scrollMargin: "60px" }} ref={expRef} />
+    </div>
   );
 }

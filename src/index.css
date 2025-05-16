@@ -22,34 +22,6 @@
   --ring-blur: 20px;
 }
 
-@media (width >=40rem) {
-  :root {
-    --ring-offset: 12px;
-    --ring-blur: 30px;
-  }
-}
-
-/* @media (width >=48rem) {
-  :root {
-    --ring-offset: 10px;
-    --ring-blur: 10px;
-  }
-}
-
-@media (width >=64rem) {
-  :root {
-    --ring-offset: 15px;
-    --ring-blur: 15px;
-  }
-} */
-
-@media (width >=80rem) {
-  :root {
-    --ring-offset: 16px;
-    --ring-blur: 40px;
-  }
-}
-
 .dark {
   --color-main: #4c5c5a;
   --color-main-content: #dad6cf;
@@ -85,6 +57,34 @@
   --color-primary-900: #1e2423;
 }
 
+@media (width >=40rem) {
+  :root {
+    --ring-offset: 12px;
+    --ring-blur: 30px;
+  }
+}
+
+/* @media (width >=48rem) {
+  :root {
+    --ring-offset: 10px;
+    --ring-blur: 10px;
+  }
+}
+
+@media (width >=64rem) {
+  :root {
+    --ring-offset: 15px;
+    --ring-blur: 15px;
+  }
+} */
+
+@media (width >=80rem) {
+  :root {
+    --ring-offset: 16px;
+    --ring-blur: 40px;
+  }
+}
+
 .animate-slow-spin {
   animation: slow-spin 8s linear infinite;
 }
@@ -102,7 +102,7 @@
 }
 
 .height-hero {
-  @apply h-screen min-h-[400px]
+  @apply h-screen min-h-[400px] max-h-[1024px]
 }
 
 .hero-ring {
