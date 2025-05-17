@@ -9,12 +9,11 @@ export default function Projects() {
         {projectsData.map((exp) => (
           <Card
             key={exp.title}
+            bioType="projects"
             title={exp.title}
             description={exp.description}
             img={exp.img}
             dates={exp.dates}
-            // imgBgColor={styling[exp.title].bgColor}
-            // imgClasses={styling[exp.title].imgClass}
           />
         ))}
       </div>

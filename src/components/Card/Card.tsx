@@ -1,4 +1,5 @@
 import { CSSProperties } from "react";
+import { Link } from "react-router";
 import {
   Card as BarrelrollaCard,
   CardImageContainer,
@@ -7,8 +8,10 @@ import {
   CardText,
   CardTitle,
 } from "@barrelrolla/react-components-library";
+import { BioType } from "../../data/bio";
 
 type CardProps = {
+  bioType: BioType;
   title: string;
   img: string;
   description: string;
@@ -18,6 +21,7 @@ type CardProps = {
 };
 
 export default function Card({
+  bioType,
   title,
   img,
   description,
@@ -33,6 +37,8 @@ export default function Card({
       className="h-full"
     >
       <CardInteract
+        as={Link}
+        to={`/${bioType}/${title}`}
         className="flex flex-col @md:flex-row"
         aria-label={`${title} link`}
         style={{ "--h": "calc(var(--mod-highlight) * -1)" } as CSSProperties}

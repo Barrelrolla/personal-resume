@@ -36,7 +36,9 @@ export const contacts = [
   },
 ];
 
-type BioType = {
+export type BioType = "experience" | "education" | "projects";
+
+export type BioDataType = {
   img: string;
   title: string;
   specialty?: string;
@@ -47,7 +49,7 @@ type BioType = {
   logoPadding?: string;
 };
 
-export const experienceData: BioType[] = [
+export const experienceData: BioDataType[] = [
   {
     img: ubiLogo,
     title: "Ubisoft",
@@ -71,7 +73,7 @@ export const experienceData: BioType[] = [
   },
 ];
 
-export const educationData: BioType[] = [
+export const educationData: BioDataType[] = [
   {
     img: telerikLogo,
     title: "Telerik Academy",
@@ -84,7 +86,7 @@ export const educationData: BioType[] = [
   },
 ];
 
-export const projectsData: BioType[] = [
+export const projectsData: BioDataType[] = [
   {
     img: "https://placehold.co/600x400",
     title: "React components library",

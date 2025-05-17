@@ -6,10 +6,11 @@ import {
   RouterProvider,
 } from "react-router";
 import { ThemeContextProvider } from "@barrelrolla/react-components-library";
+import DetailsPage from "./pages/DetailsPage";
 import HomePage from "./pages/HomePage";
-import RootLayout from "./layouts/RootLayout";
-import NotFound from "./pages/NotFound";
 import ErrorPage from "./pages/ErrorPage";
+import NotFound from "./pages/NotFound";
+import RootLayout from "./layouts/RootLayout";
 import { navLinks } from "./data/navLinks";
 import "./index.css";
 
@@ -20,6 +21,13 @@ const navRoutes: NonIndexRouteObject[] = navLinks.map((link) => {
     ErrorBoundary: ErrorPage,
   };
 });
+const detailsRoutes: NonIndexRouteObject[] = navLinks.map((link) => {
+  return {
+    path: `${link.path}/:id`,
+    Component: DetailsPage,
+  };
+});
+
 const router = createHashRouter([
   {
     path: "/",
@@ -31,6 +39,7 @@ const router = createHashRouter([
         Component: HomePage,
       },
       ...navRoutes,
+      ...detailsRoutes,
       {
         path: "*",
         Component: NotFound,

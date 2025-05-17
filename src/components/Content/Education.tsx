@@ -9,6 +9,7 @@ export default function Education() {
         {educationData.map((edu) => (
           <Card
             key={edu.title}
+            bioType="education"
             title={edu.title}
             img={edu.img}
             dates={edu.dates}
