@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@barrelrolla/react-components-library";
 import { BioType } from "../../data/bio";
+import { motion } from "motion/react";
 
 type CardProps = {
   bioType: BioType;
@@ -30,39 +31,46 @@ export default function Card({
   imgClasses,
 }: CardProps) {
   return (
-    <BarrelrollaCard
-      containerClasses="group odd:self-start even:self-end max-w-4xl"
-      key={title}
-      color="main"
-      className="h-full"
+    <motion.div
+      initial={{ translateX: -1000 }}
+      whileInView={{ translateX: 0 }}
+      transition={{ duration: 0.3, delay: 0.2 }}
+      viewport={{ once: true }}
     >
-      <CardInteract
-        as={Link}
-        to={`/${bioType}/${title}`}
-        className="flex flex-col @md:flex-row"
-        aria-label={`${title} link`}
-        style={{ "--h": "calc(var(--mod-highlight) * -1)" } as CSSProperties}
+      <BarrelrollaCard
+        containerClasses="group odd:self-start even:self-end max-w-4xl"
+        key={title}
+        color="main"
+        className="h-full"
       >
-        <CardSection className="flex-1/2 @md:group-even:order-last">
-          <CardImageContainer
-            className="items-center flex"
-            style={{
-              backgroundColor: imgBgColor || "#fff",
-            }}
-          >
-            <img
-              className={imgClasses || "card-image"}
-              src={img}
-              alt={`${title} logo`}
-            />
-          </CardImageContainer>
-        </CardSection>
-        <CardSection className="flex-1/2">
-          <CardTitle>{title}</CardTitle>
-          {dates && <p className="px-4">{dates}</p>}
-          <CardText>{description}</CardText>
-        </CardSection>
-      </CardInteract>
-    </BarrelrollaCard>
+        <CardInteract
+          as={Link}
+          to={`/${bioType}/${title}`}
+          className="flex flex-col @md:flex-row"
+          aria-label={`${title} link`}
+          style={{ "--h": "calc(var(--mod-highlight) * -1)" } as CSSProperties}
+        >
+          <CardSection className="flex-1/2 @md:group-even:order-last">
+            <CardImageContainer
+              className="flex items-center"
+              style={{
+                backgroundColor: imgBgColor || "#fff",
+              }}
+            >
+              <img
+                className={imgClasses || "card-image"}
+                src={img}
+                alt={`${title} logo`}
+              />
+            </CardImageContainer>
+          </CardSection>
+          <CardSection className="flex-1/2">
+            <CardTitle>{title}</CardTitle>
+            {dates && <p className="px-4">{dates}</p>}
+            <CardText>{description}</CardText>
+          </CardSection>
+        </CardInteract>
+      </BarrelrollaCard>
+    </motion.div>
   );
 }

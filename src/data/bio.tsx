@@ -85,7 +85,7 @@ export const educationData: BioDataType[] = [
       "I studied programming basics with C#, back-end with Node.js and C#, HTML, CSS, JavaScript, TypeScript, Angular, iOS and Android.",
     fullInfo: "Not yet implemented",
     dates: "March 2016 - March 2017",
-    imgClass: "scale-90 object-contain group-hover:scale-100 transition",
+    imgClass: "scale-90 my-14 object-contain group-hover:scale-100 transition",
     website: "https://www.telerikacademy.com/",
   },
 ];

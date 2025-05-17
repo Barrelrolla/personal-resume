@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound";
 import RootLayout from "./layouts/RootLayout";
 import { navLinks } from "./data/navLinks";
 import "./index.css";
+import { AnimatePresence } from "motion/react";
 
 const navRoutes: NonIndexRouteObject[] = navLinks.map((link) => {
   return {
@@ -51,7 +52,9 @@ const router = createHashRouter([
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeContextProvider value={{ buttonsRetainFocus: false }}>
-      <RouterProvider router={router} />
+      <AnimatePresence mode="wait">
+        <RouterProvider router={router} />
+      </AnimatePresence>
     </ThemeContextProvider>
   </StrictMode>,
 );

@@ -4,6 +4,7 @@ import Experience from "../components/Content/Experience";
 import Hero from "../components/Hero/Hero";
 import Education from "../components/Content/Education";
 import Projects from "../components/Content/Projects";
+import BasePage from "../components/Page/BasePage";
 
 export default function HomePage() {
   function checkNeedButton() {
@@ -39,34 +40,38 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="justify-self-center">
-      <Hero />
-      {needButton && (
-        <Button
-          ref={buttonRef}
-          aria-label="scroll down"
-          variant="outline"
-          radius="pill"
-          size="xl"
-          startIcon={<CaretIcon />}
-          wrapperClasses="absolute bottom-4 animate-bounce left-[calc(50%-28px)]"
-          onClick={() => {
-            buttonRef.current?.parentElement?.classList.add("animate-fade-out");
-            bioRef.current?.scrollIntoView({
-              behavior: "smooth",
-            });
-          }}
-        ></Button>
-      )}
-      <section
-        className="space-y-14"
-        ref={bioRef}
-        style={{ scrollMargin: "60px" }}
-      >
-        <Experience />
-        <Education />
-        <Projects />
-      </section>
-    </div>
+    <BasePage>
+      <div className="justify-self-center">
+        <Hero />
+        {needButton && (
+          <Button
+            ref={buttonRef}
+            aria-label="scroll down"
+            variant="outline"
+            radius="pill"
+            size="xl"
+            startIcon={<CaretIcon />}
+            wrapperClasses="absolute bottom-4 animate-bounce left-[calc(50%-28px)]"
+            onClick={() => {
+              buttonRef.current?.parentElement?.classList.add(
+                "animate-fade-out",
+              );
+              bioRef.current?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          ></Button>
+        )}
+        <section
+          className="space-y-14"
+          ref={bioRef}
+          style={{ scrollMargin: "60px" }}
+        >
+          <Experience />
+          <Education />
+          <Projects />
+        </section>
+      </div>
+    </BasePage>
   );
 }
