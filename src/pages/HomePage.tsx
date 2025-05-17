@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { Button, CaretIcon } from "@barrelrolla/react-components-library";
 import Experience from "../components/Content/Experience";
 import Hero from "../components/Hero/Hero";
+import Education from "../components/Content/Education";
+import Projects from "../components/Content/Projects";
 
 export default function HomePage() {
   function checkNeedButton() {
@@ -56,8 +58,14 @@ export default function HomePage() {
           }}
         ></Button>
       )}
-      <section ref={bioRef} style={{ scrollMargin: "60px" }}>
+      <section
+        className="space-y-14"
+        ref={bioRef}
+        style={{ scrollMargin: "60px" }}
+      >
         <Experience />
+        <Education />
+        <Projects />
       </section>
     </div>
   );

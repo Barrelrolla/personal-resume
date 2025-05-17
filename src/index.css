@@ -120,6 +120,10 @@
     1px -1px var(--blur) var(--color-main);
 }
 
+.bio-container {
+  @apply mt-6 flex flex-col gap-6 items-end md:items-stretch;
+}
+
 .animate-fade-out {
   animation: fade-out 300ms linear forwards
 }

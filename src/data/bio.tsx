@@ -1,5 +1,7 @@
 import ubiLogo from "../assets/ubisoft_logo.avif";
 import melonLogo from "../assets/melon_logo.svg";
+import telerikLogo from "../assets/telerik_logo.png";
+
 import {
   GitHubIcon,
   LetterIcon,
@@ -34,19 +36,18 @@ export const contacts = [
   },
 ];
 
-type ExperienceType = {
+type BioType = {
   img: string;
   title: string;
-  specialty: string;
+  specialty?: string;
   description: string;
   fullInfo: string;
-  dates: string;
+  dates?: string;
   website?: string;
-  bgColor?: string;
   logoPadding?: string;
 };
 
-export const experienceData: ExperienceType[] = [
+export const experienceData: BioType[] = [
   {
     img: ubiLogo,
     title: "Ubisoft",
@@ -66,7 +67,29 @@ export const experienceData: ExperienceType[] = [
     fullInfo: "Not yet implemented",
     dates: "April 2017 - April 2018",
     website: "https://oldmelon.melontech.com/",
-    bgColor: "#183f57",
     logoPadding: "1rem",
+  },
+];
+
+export const educationData: BioType[] = [
+  {
+    img: telerikLogo,
+    title: "Telerik Academy",
+    specialty: "web and mobile development",
+    description:
+      "I studied programming basics with C#, back-end with Node.js and C#, HTML, CSS, JavaScript, TypeScript, Angular, iOS and Android.",
+    fullInfo: "Not yet implemented",
+    dates: "March 2016 - March 2017",
+    website: "https://www.telerikacademy.com/",
+  },
+];
+
+export const projectsData: BioType[] = [
+  {
+    img: "https://placehold.co/600x400",
+    title: "React components library",
+    description: "A react components library I build for my personal projects.",
+    fullInfo: "Not yet implemented",
+    website: "https://barrelrolla.github.io/react-components-library/",
   },
 ];
