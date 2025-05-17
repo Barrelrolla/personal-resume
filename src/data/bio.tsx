@@ -46,7 +46,9 @@ export type BioDataType = {
   fullInfo: string;
   dates?: string;
   website?: string;
-  logoPadding?: string;
+  github?: string;
+  imgClass?: string;
+  bgColor?: string;
 };
 
 export const experienceData: BioDataType[] = [
@@ -69,7 +71,8 @@ export const experienceData: BioDataType[] = [
     fullInfo: "Not yet implemented",
     dates: "April 2017 - April 2018",
     website: "https://oldmelon.melontech.com/",
-    logoPadding: "1rem",
+    bgColor: "#183f57",
+    imgClass: "scale-50 object-contain group-hover:scale-55 transition",
   },
 ];
 
@@ -82,6 +85,7 @@ export const educationData: BioDataType[] = [
       "I studied programming basics with C#, back-end with Node.js and C#, HTML, CSS, JavaScript, TypeScript, Angular, iOS and Android.",
     fullInfo: "Not yet implemented",
     dates: "March 2016 - March 2017",
+    imgClass: "scale-90 object-contain group-hover:scale-100 transition",
     website: "https://www.telerikacademy.com/",
   },
 ];
@@ -93,5 +97,6 @@ export const projectsData: BioDataType[] = [
     description: "A react components library I build for my personal projects.",
     fullInfo: "Not yet implemented",
     website: "https://barrelrolla.github.io/react-components-library/",
+    github: "https://github.com/Barrelrolla/react-components-library",
   },
 ];

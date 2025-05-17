@@ -4,7 +4,14 @@ import PageContent from "../components/Page/PageContent";
 import { getBioData } from "../util/dataHelper";
 import { useEffect, useState } from "react";
 import { BioDataType } from "../data/bio";
-import { Spinner } from "@barrelrolla/react-components-library";
+import {
+  Anchor,
+  Button,
+  Card,
+  CardImageContainer,
+  GitHubIcon,
+  Spinner,
+} from "@barrelrolla/react-components-library";
 
 export default function DetailsPage() {
   const [data, setData] = useState<BioDataType | undefined>(undefined);
@@ -30,10 +37,38 @@ export default function DetailsPage() {
         </div>
       )}
       {data && (
-        <>
-          <h2>{data.title}</h2>
-          <p>{data.fullInfo}</p>
-        </>
+        <div className="flex flex-col items-center mt-6">
+          <Card containerClasses="border-transparent">
+            <CardImageContainer
+              style={{ backgroundColor: data.bgColor || "#fff" }}
+            >
+              <img
+                className={data.imgClass}
+                src={data.img}
+                alt={`${data.title} logo`}
+              />
+            </CardImageContainer>
+          </Card>
+          <h2 className="text-2xl font-medium">{data.title}</h2>
+          {data.dates && <p>{data.dates}</p>}
+          <p className="my-4">{data.fullInfo}</p>
+          {data.website && (
+            <Anchor href={data.website} target="_blank">
+              {data.website}
+            </Anchor>
+          )}
+          {data.github && (
+            <Button
+              as="a"
+              href={data.github}
+              target="_blank"
+              wrapperClasses="mt-2"
+              startIcon={<GitHubIcon strokeWidth={16} />}
+            >
+              Repo
+            </Button>
+          )}
+        </div>
       )}
     </BasePage>
   );

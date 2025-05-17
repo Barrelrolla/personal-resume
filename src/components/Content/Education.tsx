@@ -14,7 +14,8 @@ export default function Education() {
             img={edu.img}
             dates={edu.dates}
             description={edu.description}
-            imgClasses="scale-90 object-contain group-hover:scale-100 transition"
+            imgClasses={edu.imgClass}
+            imgBgColor={edu.bgColor}
           />
         ))}
       </div>
