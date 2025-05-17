@@ -26,7 +26,7 @@ export default function DetailsPage() {
       <PageContent className="capitalize" title={path[1]} />
       {!data && (
         <div>
-          <Spinner />
+          <Spinner className="mx-auto text-9xl mt-20" strokeWidth={4} />
         </div>
       )}
       {data && (
