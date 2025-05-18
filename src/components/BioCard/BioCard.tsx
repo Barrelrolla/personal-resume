@@ -31,7 +31,7 @@ export default function BioCard({
 
   if (loading) {
     return (
-      <div className="flex h-65 w-xl items-center justify-center odd:self-start even:self-end">
+      <div className="flex h-65 w-xl items-center justify-center self-center">
         <Spinner className="text-9xl" strokeWidth={4} />
       </div>
     );
