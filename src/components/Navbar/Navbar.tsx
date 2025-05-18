@@ -34,7 +34,7 @@ export default function Navbar() {
         <Button
           variant="outline"
           as={"a"}
-          href="Julian_Teofilov_CV.pdf"
+          href="/Julian_Teofilov_CV.pdf"
           download
           target="_self"
           size="sm"

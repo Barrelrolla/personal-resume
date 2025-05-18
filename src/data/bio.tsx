@@ -65,7 +65,7 @@ export const experienceData: BioDataType[] = [
     description:
       "I contributed to multiple AAA projects like The Division 2, Assassin's Creed: Mirage, Assassin's Creed: Shadows and others.",
     fullInfo:
-      "As a UI Programmer in Ubisoft, I have worked on multiple AAA video games, such as The Division 2, Assassin's Creed Valhalla: Dawn of Ragnarok, Assassin's Creed Mirage and Assassin's Creed Shadows. I have developed different HUD elements and menu pages in the game, and maintained others. In The Division 2 I was responsible for the in-game currency store while in Assassin's Creed I have worked on many HUD elements in different projects, as well as several menu pages. I have used tools like Jira, Confluence, Perfoce and many others to help with organizing tasks, documentation and source control.\nEvery project I have worked on comes with it's own set of challenges, but I am experienced in optimizing and debugging code, finding issues and delivering projects with a tight deadline.",
+      "As a UI Programmer in Ubisoft, I have worked on multiple AAA video games, such as The Division 2, Assassin's Creed Valhalla: Dawn of Ragnarok, Assassin's Creed Mirage and Assassin's Creed Shadows. I have developed different HUD elements and menu pages in the game, and maintained others. In The Division 2 I was responsible for the in-game currency store while in Assassin's Creed I have worked on many HUD elements in different projects, as well as several menu pages. I have used tools like Jira, Confluence, Perfoce and many others to help with organizing tasks, documentation and source control.\n\nEvery project I have worked on comes with it's own set of challenges, but I am experienced in optimizing and debugging code, finding issues and delivering projects with a tight deadline.",
     dates: "April 2018 - Present",
     website: "https://www.ubisoft.com/",
   },
@@ -77,7 +77,7 @@ export const experienceData: BioDataType[] = [
     description:
       "I worked on front-end applications in different frameworks like Phaser and React.",
     fullInfo:
-      "As a front-end developer I have worked on several different projects , a web-based game using Phaser and TypeScript, a couple front-end web applications, one using Angular and the other using React, creating reusable components as well as creating libraries for use on other projects.\nEvery project I have worked on during my time there used a different framework and a different variation of JavaScript. I have proven my ability to learn new technologies and adapt fast.\nI have used REST APIs, unit tests as well as tools like Jira, webpack, Git and many others to help with the development process.",
+      "As a front-end developer I have worked on several different projects , a web-based game using Phaser and TypeScript, a couple front-end web applications, one using Angular and the other using React, creating reusable components as well as creating libraries for use on other projects.\n\nEvery project I have worked on during my time there used a different framework and a different variation of JavaScript. I have proven my ability to learn new technologies and adapt fast.\n\nI have used REST APIs, unit tests as well as tools like Jira, webpack, Git and many others to help with the development process.",
     dates: "April 2017 - April 2018",
     website: "https://oldmelon.melontech.com/",
     bgColor: "#183f57",
