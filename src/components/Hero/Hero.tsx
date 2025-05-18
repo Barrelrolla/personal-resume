@@ -3,7 +3,6 @@ import {
   Button,
   HeroActions,
   HeroSection,
-  HeroText,
   HeroTitle,
 } from "@barrelrolla/react-components-library";
 import Ring from "../Ring/Ring";
@@ -13,21 +12,21 @@ export default function Hero() {
   return (
     <BarrelrollaHero
       wrapperClasses="overflow-visible"
-      className="height-hero -mt-20 font-serif gap-6"
+      className="height-hero -mt-20 gap-6 font-serif"
       textAlign="responsive"
     >
-      <HeroSection className="flex-1/2 items-center md:order-last overflow-x-visible relative">
+      <HeroSection className="relative flex-1/2 items-center overflow-x-visible md:order-last">
         <Ring />
-        <HeroTitle className="text-5xl font-medium sm:text-6xl xl:text-8xl relative z-1 hero-text-shadow text-center">
+        <HeroTitle className="relative z-1 text-center text-5xl font-medium sm:text-6xl xl:text-8xl">
           Julian
           <br />
           Teofilov
         </HeroTitle>
-        <HeroText className="font-semibold sm:text-2xl xl:text-4xl relative z-1">
+        <h2 className="relative z-1 font-semibold sm:text-2xl xl:text-4xl">
           UI Developer
-        </HeroText>
+        </h2>
       </HeroSection>
-      <HeroSection className="font-sans flex-1/2 max-md:justify-start">
+      <HeroSection className="flex-1/2 font-sans max-md:justify-start">
         <p className="text-pretty">
           I'm a UI developer with 8 years of experience in front-end web and
           video game UI development. Skilled in C++, C#, JavaScript, TypeScript,
@@ -35,7 +34,7 @@ export default function Hero() {
           to AAA titles like The Division 2 and multiple Assassin's Creed games,
           working in both small teams and large international studios.
         </p>
-        <HeroActions className="gap-2 justify-around">
+        <HeroActions className="justify-around gap-2">
           <Button as={Link} to="/projects" className="w-[145px]">
             My projects
           </Button>

@@ -1,7 +1,13 @@
-import { ComponentProps } from "react";
+import { ElementType } from "react";
+import { PolymorphicProps } from "@barrelrolla/react-components-library";
 
-export default function PageTitle({ children }: ComponentProps<"h1">) {
+const defaultType = "h1";
+export default function PageTitle<E extends ElementType = typeof defaultType>({
+  as,
+  children,
+}: PolymorphicProps<E>) {
+  const H = as || defaultType;
   return (
-    <h1 className="text-5xl font-medium capitalize md:text-6xl">{children}</h1>
+    <H className="text-5xl font-medium capitalize md:text-6xl">{children}</H>
   );
 }
