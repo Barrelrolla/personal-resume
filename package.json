@@ -12,6 +12,8 @@
   "homepage": "https://julian-teofilov.vercel.app/",
   "dependencies": {
     "@tailwindcss/vite": "^4.0.15",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "motion": "^12.5.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

@@ -14,6 +14,8 @@ import BioLayout from "./layouts/BioLayout";
 import RootLayout from "./layouts/RootLayout";
 import { navLinks } from "./data/navLinks";
 import "./index.css";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const navRoutes: NonIndexRouteObject[] = navLinks.map((link) => {
   return {
@@ -52,6 +54,8 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeContextProvider value={{ buttonsRetainFocus: false }}>
       <RouterProvider router={router} />
+      <Analytics />
+      <SpeedInsights />
     </ThemeContextProvider>
   </StrictMode>,
 );
