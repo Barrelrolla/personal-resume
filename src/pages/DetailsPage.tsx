@@ -62,7 +62,7 @@ export default function DetailsPage() {
           </Card>
           <h2 className="text-2xl font-medium">{data.title}</h2>
           {data.dates && <p>{data.dates}</p>}
-          <p className="my-4">{data.fullInfo}</p>
+          <p className="my-4 whitespace-pre-line">{data.fullInfo}</p>
           {data.website && (
             <Anchor href={data.website} target="_blank">
               {data.website}
