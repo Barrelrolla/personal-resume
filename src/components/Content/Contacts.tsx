@@ -30,7 +30,7 @@ function Contact({ title, url, text }: ContactProps) {
   return (
     <>
       <p className="max-md:mt-4">{title + ": "}</p>
-      <Anchor href={url} target="_blank">
+      <Anchor className="w-fit" href={url} target="_blank">
         {text}
       </Anchor>
     </>
