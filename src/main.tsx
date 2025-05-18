@@ -9,7 +9,6 @@ import { ThemeContextProvider } from "@barrelrolla/react-components-library";
 import DetailsPage from "./pages/DetailsPage";
 import HomePage from "./pages/HomePage";
 import ErrorPage from "./pages/ErrorPage";
-import NotFound from "./pages/NotFound";
 import BioLayout from "./layouts/BioLayout";
 import RootLayout from "./layouts/RootLayout";
 import { navLinks } from "./data/navLinks";
