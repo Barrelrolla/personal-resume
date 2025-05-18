@@ -2,14 +2,15 @@ import PageContent from "../Page/PageContent";
 import { experienceData } from "../../data/bio";
 import Card from "../Card/Card";
 
-export default function Experience() {
+export default function Experience({ title }: { title?: string }) {
   return (
-    <PageContent title="Experience">
+    <PageContent title={title}>
       <div className="bio-container">
         {experienceData.map((exp) => (
           <Card
             key={exp.title}
             id={exp.id}
+            bioType="experience"
             title={exp.title}
             description={exp.description}
             img={exp.img}

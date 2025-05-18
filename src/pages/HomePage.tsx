@@ -63,9 +63,9 @@ export default function HomePage() {
         ref={bioRef}
         style={{ scrollMargin: "60px" }}
       >
-        <Experience />
-        <Education />
-        <Projects />
+        <Experience title="Experience" />
+        <Education title="Education" />
+        <Projects title="Projects" />
       </section>
     </div>
   );

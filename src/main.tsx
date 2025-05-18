@@ -10,6 +10,7 @@ import DetailsPage from "./pages/DetailsPage";
 import HomePage from "./pages/HomePage";
 import ErrorPage from "./pages/ErrorPage";
 import NotFound from "./pages/NotFound";
+import BioLayout from "./layouts/BioLayout";
 import RootLayout from "./layouts/RootLayout";
 import { navLinks } from "./data/navLinks";
 import "./index.css";
@@ -17,14 +18,14 @@ import "./index.css";
 const navRoutes: NonIndexRouteObject[] = navLinks.map((link) => {
   return {
     path: link.path,
-    Component: link.element,
-    ErrorBoundary: ErrorPage,
-  };
-});
-const detailsRoutes: NonIndexRouteObject[] = navLinks.map((link) => {
-  return {
-    path: `${link.path}/:id`,
-    Component: DetailsPage,
+    element: <BioLayout title={link.path} />,
+    children: [
+      { index: true, Component: link.element },
+      {
+        path: ":id",
+        Component: DetailsPage,
+      },
+    ],
   };
 });
 
@@ -39,7 +40,6 @@ const router = createBrowserRouter([
         Component: HomePage,
       },
       ...navRoutes,
-      ...detailsRoutes,
       {
         path: "*",
         Component: NotFound,

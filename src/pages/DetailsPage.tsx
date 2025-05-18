@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router";
+import { useParams } from "react-router";
 import {
   Anchor,
   Button,
@@ -9,7 +9,6 @@ import {
   Spinner,
 } from "@barrelrolla/react-components-library";
 import BasePage from "../components/Page/BasePage";
-import PageContent from "../components/Page/PageContent";
 import { getBioData } from "../util/dataHelper";
 import { BioDataType } from "../data/bio";
 import NotFoundContent from "../components/Page/NotFoundContent";
@@ -17,7 +16,6 @@ import NotFoundContent from "../components/Page/NotFoundContent";
 export default function DetailsPage() {
   const [data, setData] = useState<BioDataType | undefined | null>(undefined);
   const { id } = useParams();
-  const path = useLocation().pathname.split("/");
 
   useEffect(() => {
     const foundData = getBioData(id || "");
@@ -26,7 +24,6 @@ export default function DetailsPage() {
 
   return (
     <BasePage>
-      <PageContent className="capitalize" title={path[1]} />
       {data === undefined && (
         <div>
           <Spinner className="mx-auto mt-20 text-9xl" strokeWidth={4} />

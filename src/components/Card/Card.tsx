@@ -8,9 +8,11 @@ import {
   CardText,
   CardTitle,
 } from "@barrelrolla/react-components-library";
+import { BioType } from "../../data/bio";
 
 type CardProps = {
   id: string;
+  bioType: BioType;
   title: string;
   img: string;
   description: string;
@@ -21,6 +23,7 @@ type CardProps = {
 
 export default function Card({
   id,
+  bioType,
   title,
   img,
   description,
@@ -37,7 +40,7 @@ export default function Card({
     >
       <CardInteract
         as={Link}
-        to={`${id}`}
+        to={`/${bioType}/${id}`}
         className="flex flex-col @md:flex-row"
         aria-label={`${title} link`}
         style={{ "--h": "calc(var(--mod-highlight) * -1)" } as CSSProperties}

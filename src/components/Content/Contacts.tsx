@@ -4,9 +4,9 @@ import { contacts } from "../../data/bio";
 
 export default function Contacts() {
   return (
-    <PageContent title="Contacts">
-      <div className="space-y-2 mt-6">
-        <div className="grid-cols-2 md:grid-left md:grid md:gap-2">
+    <PageContent>
+      <div className="mt-6 space-y-2">
+        <div className="md:grid-left grid-cols-2 md:grid md:gap-2">
           {contacts.map((contact) => (
             <Contact
               key={contact.title}

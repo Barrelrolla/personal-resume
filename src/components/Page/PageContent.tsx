@@ -1,7 +1,7 @@
 import { ComponentProps } from "react";
 import { twMerge } from "tailwind-merge";
-import PageTitle from "../ui/PageTitle";
 import { Divider } from "@barrelrolla/react-components-library";
+import PageTitle from "../ui/PageTitle";
 
 export type PageContentProps = {
   title?: string;
