@@ -27,6 +27,8 @@ export default function DetailsPage() {
         setLoading(false);
       };
       image.src = foundData.img;
+    } else {
+      setLoading(false);
     }
   }, [id]);
 
