@@ -15,6 +15,8 @@ export default function Projects({ title }: { title?: string }) {
             description={exp.description}
             img={exp.img}
             dates={exp.dates}
+            imgBgColor={exp.bgColor}
+            imgClasses={exp.imgClass}
           />
         ))}
       </div>
