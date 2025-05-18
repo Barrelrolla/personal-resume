@@ -49,7 +49,7 @@ export default function DetailsPage() {
       {!data && <NotFoundContent title="Content" />}
       {data && (
         <div className="mt-6 flex flex-col items-center">
-          <Card containerClasses="border-transparent">
+          <Card containerClasses="border-transparent mb-6">
             <CardImageContainer
               style={{ backgroundColor: data.bgColor || "#000" }}
             >
@@ -62,7 +62,7 @@ export default function DetailsPage() {
           </Card>
           <h2 className="text-2xl font-medium">{data.title}</h2>
           {data.dates && <p>{data.dates}</p>}
-          <p className="my-4 max-w-[48rem] whitespace-pre-line">
+          <p className="my-5 max-w-[48rem] whitespace-pre-line">
             {data.fullInfo}
           </p>
           {data.website && (
