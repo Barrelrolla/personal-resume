@@ -40,7 +40,7 @@ export const contacts = [
   },
 ];
 
-export type BioType = "experience" | "education" | "projects";
+export type BioCategory = "experience" | "education" | "projects";
 
 export type BioDataType = {
   id: string;

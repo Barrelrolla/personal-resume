@@ -1,38 +1,44 @@
-import { CSSProperties } from "react";
+import { CSSProperties, useEffect, useState } from "react";
 import { Link } from "react-router";
 import {
-  Card as BarrelrollaCard,
+  Card,
   CardImageContainer,
   CardInteract,
   CardSection,
   CardText,
   CardTitle,
+  Spinner,
 } from "@barrelrolla/react-components-library";
-import { BioType } from "../../data/bio";
+import { BioCategory, BioDataType } from "../../data/bio";
 
-type CardProps = {
-  id: string;
-  bioType: BioType;
-  title: string;
-  img: string;
-  description: string;
-  dates?: string;
-  imgBgColor?: string;
-  imgClasses?: string;
-};
+export default function BioCard({
+  category,
+  bio,
+}: {
+  category: BioCategory;
+  bio: BioDataType;
+}) {
+  const [loading, setLoading] = useState(true);
+  const { id, title, img, imgClass, bgColor, description, dates } = bio;
 
-export default function Card({
-  id,
-  bioType,
-  title,
-  img,
-  description,
-  dates,
-  imgBgColor,
-  imgClasses,
-}: CardProps) {
+  useEffect(() => {
+    const image = new Image();
+    image.onload = () => {
+      setLoading(false);
+    };
+    image.src = bio.img;
+  }, [bio]);
+
+  if (loading) {
+    return (
+      <div className="flex h-70 w-xl justify-center odd:self-start even:self-end">
+        <Spinner className="text-9xl" strokeWidth={4} />
+      </div>
+    );
+  }
+
   return (
-    <BarrelrollaCard
+    <Card
       containerClasses="group odd:self-start even:self-end max-w-4xl"
       key={title}
       color="main"
@@ -40,7 +46,7 @@ export default function Card({
     >
       <CardInteract
         as={Link}
-        to={`/${bioType}/${id}`}
+        to={`/${category}/${id}`}
         className="flex flex-col @md:flex-row"
         aria-label={`${title} link`}
         style={{ "--h": "calc(var(--mod-highlight) * -1)" } as CSSProperties}
@@ -49,11 +55,11 @@ export default function Card({
           <CardImageContainer
             className="flex items-center"
             style={{
-              backgroundColor: imgBgColor || "",
+              backgroundColor: bgColor || "",
             }}
           >
             <img
-              className={imgClasses || "card-image"}
+              className={imgClass || "card-image"}
               src={img}
               alt={`${title} logo`}
             />
@@ -65,6 +71,6 @@ export default function Card({
           <CardText>{description}</CardText>
         </CardSection>
       </CardInteract>
-    </BarrelrollaCard>
+    </Card>
   );
 }

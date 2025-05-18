@@ -1,23 +1,13 @@
 import { projectsData } from "../../data/bio";
-import Card from "../Card/Card";
+import BioCard from "../BioCard/BioCard";
 import PageContent from "../Page/PageContent";
 
 export default function Projects({ title }: { title?: string }) {
   return (
     <PageContent title={title}>
       <div className="bio-container">
-        {projectsData.map((exp) => (
-          <Card
-            key={exp.title}
-            id={exp.id}
-            bioType="projects"
-            title={exp.title}
-            description={exp.description}
-            img={exp.img}
-            dates={exp.dates}
-            imgBgColor={exp.bgColor}
-            imgClasses={exp.imgClass}
-          />
+        {projectsData.map((pro) => (
+          <BioCard key={pro.id} bio={pro} category="projects" />
         ))}
       </div>
     </PageContent>
