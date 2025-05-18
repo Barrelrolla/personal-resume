@@ -30,7 +30,7 @@ export default function BioCard({
 
   return (
     <Card
-      containerClasses="group h-56 odd:self-start even:self-end max-w-4xl"
+      containerClasses="group odd:self-start even:self-end max-w-4xl"
       key={title}
       color="main"
       className="h-full"
@@ -38,7 +38,7 @@ export default function BioCard({
       <CardInteract
         as={Link}
         to={`/${category}/${id}`}
-        className="flex flex-col @md:flex-row"
+        className="flex flex-col @md:h-56 @md:flex-row"
         aria-label={`${title} link`}
         style={{ "--h": "calc(var(--mod-highlight) * -1)" } as CSSProperties}
       >
