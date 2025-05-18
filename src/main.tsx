@@ -40,10 +40,6 @@ const router = createBrowserRouter([
         Component: HomePage,
       },
       ...navRoutes,
-      {
-        path: "*",
-        Component: NotFound,
-      },
     ],
   },
 ]);
