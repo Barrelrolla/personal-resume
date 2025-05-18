@@ -7,7 +7,6 @@ import {
   CardSection,
   CardText,
   CardTitle,
-  Spinner,
 } from "@barrelrolla/react-components-library";
 import { BioCategory, BioDataType } from "../../data/bio";
 
@@ -29,17 +28,9 @@ export default function BioCard({
     image.src = bio.img;
   }, [bio]);
 
-  if (loading) {
-    return (
-      <div className="flex h-65 w-xl items-center justify-center self-center">
-        <Spinner className="text-9xl" strokeWidth={4} />
-      </div>
-    );
-  }
-
   return (
     <Card
-      containerClasses="group odd:self-start even:self-end max-w-4xl"
+      containerClasses="group h-56 odd:self-start even:self-end max-w-4xl"
       key={title}
       color="main"
       className="h-full"
@@ -58,11 +49,14 @@ export default function BioCard({
               backgroundColor: bgColor || "",
             }}
           >
-            <img
-              className={imgClass || "card-image"}
-              src={img}
-              alt={`${title} logo`}
-            />
+            {loading && <div className="h-56 w-full"></div>}
+            {!loading && (
+              <img
+                className={imgClass || "card-image"}
+                src={img}
+                alt={`${title} logo`}
+              />
+            )}
           </CardImageContainer>
         </CardSection>
         <CardSection className="flex-1/2">
