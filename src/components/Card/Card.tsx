@@ -47,7 +47,7 @@ export default function Card({
           <CardImageContainer
             className="items-center flex"
             style={{
-              backgroundColor: imgBgColor || "#fff",
+              backgroundColor: imgBgColor || "",
             }}
           >
             <img

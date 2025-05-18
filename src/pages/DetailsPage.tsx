@@ -40,7 +40,7 @@ export default function DetailsPage() {
         <div className="flex flex-col items-center mt-6">
           <Card containerClasses="border-transparent">
             <CardImageContainer
-              style={{ backgroundColor: data.bgColor || "#fff" }}
+              style={{ backgroundColor: data.bgColor || "#000" }}
             >
               <img
                 className={data.imgClass}
