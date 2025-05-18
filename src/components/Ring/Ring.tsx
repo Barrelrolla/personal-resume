@@ -1,5 +1,5 @@
 export default function Ring() {
   return (
-    <div className="absolute w-[250px] aspect-square sm:w-[350px] xl:w-[500px] rounded-full self-center justify-self-center animate-slow-spin hero-ring opacity-80"></div>
+    <div className="animate-slow-spin hero-ring absolute aspect-square w-[250px] self-center justify-self-center rounded-full opacity-80 sm:w-[350px] xl:w-[500px]"></div>
   );
 }

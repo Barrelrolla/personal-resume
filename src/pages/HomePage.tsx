@@ -4,6 +4,7 @@ import Experience from "../components/Content/Experience";
 import Hero from "../components/Hero/Hero";
 import Education from "../components/Content/Education";
 import Projects from "../components/Content/Projects";
+import BasePage from "../components/Page/BasePage";
 
 export default function HomePage() {
   function checkNeedButton() {
@@ -39,7 +40,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="justify-self-center">
+    <BasePage>
       <Hero />
       {needButton && (
         <Button
@@ -67,6 +68,6 @@ export default function HomePage() {
         <Education title="Education" />
         <Projects title="Projects" />
       </section>
-    </div>
+    </BasePage>
   );
 }

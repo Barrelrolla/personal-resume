@@ -86,6 +86,7 @@
 }
 
 .animate-slow-spin {
+  overflow-anchor: none;
   animation: slow-spin 8s linear infinite;
 }
 

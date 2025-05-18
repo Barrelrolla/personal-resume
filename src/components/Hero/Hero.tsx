@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <BarrelrollaHero
       wrapperClasses="overflow-visible"
-      className="height-hero -mt-20 gap-6 font-serif"
+      className="height-hero -mt-14 gap-6 font-serif"
       textAlign="responsive"
     >
       <HeroSection className="relative flex-1/2 items-center overflow-x-visible md:order-last">
