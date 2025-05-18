@@ -3,6 +3,8 @@ import { Link, useRouteError } from "react-router";
 import PageTitle from "../components/ui/PageTitle";
 
 export default function ErrorPage() {
+  document.title = "Julian Teofilov | Error";
+
   const error = useRouteError();
   return (
     <div className="text-center px-4 pt-40">

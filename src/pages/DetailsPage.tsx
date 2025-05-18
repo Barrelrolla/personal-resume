@@ -22,12 +22,14 @@ export default function DetailsPage() {
     const foundData = getBioData(id || "");
     setData(foundData);
     if (foundData) {
+      document.title = `Julian Teofilov | ${foundData.title}`;
       const image = new Image();
       image.onload = () => {
         setLoading(false);
       };
       image.src = foundData.img;
     } else {
+      document.title = "Julian Teofilov | Not Found";
       setLoading(false);
     }
   }, [id]);

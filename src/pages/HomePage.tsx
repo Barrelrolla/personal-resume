@@ -7,6 +7,8 @@ import Projects from "../components/Content/Projects";
 import BasePage from "../components/Page/BasePage";
 
 export default function HomePage() {
+  document.title = "Julian Teofilov";
+
   function checkNeedButton() {
     const innerHeight = window.innerHeight;
     let overMin = false;
