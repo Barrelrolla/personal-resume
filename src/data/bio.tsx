@@ -127,7 +127,7 @@ export const educationData: BioDataType[] = [
 
 export const projectsData: BioDataType[] = [
   {
-    id: "next.js project",
+    id: "next.js-project",
     img: nextLogo,
     imgClass: "scale-50 object-contain group-hover:scale-55 transition py-20",
     bgColor: "#fff",
