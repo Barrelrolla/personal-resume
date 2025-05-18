@@ -13,5 +13,4 @@ export function getBioData(id: string) {
   if (pro.length > 0) {
     return pro[0];
   }
-  return null;
 }

@@ -14,22 +14,35 @@ import { BioDataType } from "../data/bio";
 import NotFoundContent from "../components/Page/NotFoundContent";
 
 export default function DetailsPage() {
-  const [data, setData] = useState<BioDataType | undefined | null>(undefined);
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState<BioDataType | undefined>(undefined);
   const { id } = useParams();
 
   useEffect(() => {
     const foundData = getBioData(id || "");
     setData(foundData);
+    if (foundData) {
+      const image = new Image();
+      image.onload = () => {
+        setLoading(false);
+      };
+      image.src = foundData.img;
+    }
   }, [id]);
 
-  return (
-    <BasePage>
-      {data === undefined && (
+  if (loading) {
+    return (
+      <BasePage>
         <div>
           <Spinner className="mx-auto mt-20 text-9xl" strokeWidth={4} />
         </div>
-      )}
-      {data === null && <NotFoundContent title="Content" />}
+      </BasePage>
+    );
+  }
+
+  return (
+    <BasePage>
+      {!data && <NotFoundContent title="Content" />}
       {data && (
         <div className="mt-6 flex flex-col items-center">
           <Card containerClasses="border-transparent">
