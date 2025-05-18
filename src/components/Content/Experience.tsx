@@ -9,7 +9,7 @@ export default function Experience() {
         {experienceData.map((exp) => (
           <Card
             key={exp.title}
-            bioType="experience"
+            id={exp.id}
             title={exp.title}
             description={exp.description}
             img={exp.img}

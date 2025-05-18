@@ -36,9 +36,8 @@ export const contacts = [
   },
 ];
 
-export type BioType = "experience" | "education" | "projects";
-
 export type BioDataType = {
+  id: string;
   img: string;
   title: string;
   specialty?: string;
@@ -53,6 +52,7 @@ export type BioDataType = {
 
 export const experienceData: BioDataType[] = [
   {
+    id: "ubisoft",
     img: ubiLogo,
     title: "Ubisoft",
     specialty: "UI Programmer",
@@ -63,6 +63,7 @@ export const experienceData: BioDataType[] = [
     website: "https://www.ubisoft.com/",
   },
   {
+    id: "melontech",
     img: melonLogo,
     title: "Melontech",
     specialty: "Front-end developer",
@@ -78,6 +79,7 @@ export const experienceData: BioDataType[] = [
 
 export const educationData: BioDataType[] = [
   {
+    id: "telerik",
     img: telerikLogo,
     title: "Telerik Academy",
     specialty: "web and mobile development",
@@ -93,6 +95,7 @@ export const educationData: BioDataType[] = [
 
 export const projectsData: BioDataType[] = [
   {
+    id: "react-components-library",
     img: "https://placehold.co/600x400",
     title: "React components library",
     description: "A react components library I build for my personal projects.",

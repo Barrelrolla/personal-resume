@@ -1,9 +1,5 @@
-import { useLocation, useNavigate, useParams } from "react-router";
-import BasePage from "../components/Page/BasePage";
-import PageContent from "../components/Page/PageContent";
-import { getBioData } from "../util/dataHelper";
 import { useEffect, useState } from "react";
-import { BioDataType } from "../data/bio";
+import { useLocation, useParams } from "react-router";
 import {
   Anchor,
   Button,
@@ -12,32 +8,33 @@ import {
   GitHubIcon,
   Spinner,
 } from "@barrelrolla/react-components-library";
+import BasePage from "../components/Page/BasePage";
+import PageContent from "../components/Page/PageContent";
+import { getBioData } from "../util/dataHelper";
+import { BioDataType } from "../data/bio";
+import NotFoundContent from "../components/Page/NotFoundContent";
 
 export default function DetailsPage() {
-  const [data, setData] = useState<BioDataType | undefined>(undefined);
-  const navigate = useNavigate();
+  const [data, setData] = useState<BioDataType | undefined | null>(undefined);
   const { id } = useParams();
   const path = useLocation().pathname.split("/");
 
   useEffect(() => {
     const foundData = getBioData(id || "");
-    if (!foundData) {
-      navigate("/not-found", { replace: true });
-    }
-
     setData(foundData);
-  }, [id, navigate]);
+  }, [id]);
 
   return (
     <BasePage>
       <PageContent className="capitalize" title={path[1]} />
-      {!data && (
+      {data === undefined && (
         <div>
-          <Spinner className="mx-auto text-9xl mt-20" strokeWidth={4} />
+          <Spinner className="mx-auto mt-20 text-9xl" strokeWidth={4} />
         </div>
       )}
+      {data === null && <NotFoundContent title="Content" />}
       {data && (
-        <div className="flex flex-col items-center mt-6">
+        <div className="mt-6 flex flex-col items-center">
           <Card containerClasses="border-transparent">
             <CardImageContainer
               style={{ backgroundColor: data.bgColor || "#000" }}
