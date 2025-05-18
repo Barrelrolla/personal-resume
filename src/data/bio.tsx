@@ -127,6 +127,15 @@ export const educationData: BioDataType[] = [
 
 export const projectsData: BioDataType[] = [
   {
+    id: "next.js project",
+    img: nextLogo,
+    imgClass: "scale-50 object-contain group-hover:scale-55 transition py-20",
+    bgColor: "#fff",
+    title: "NextJS project",
+    description: "A NextJS I'm currently working on.",
+    fullInfo: "A NextJS I'm currently working on.",
+  },
+  {
     id: "react-components-library",
     img: libraryLogo,
     bgColor: "#1b1c1d",
@@ -146,14 +155,5 @@ export const projectsData: BioDataType[] = [
     fullInfo: "A personal resume website I built using my component library.",
     website: "https://julian-teofilov.vercel.app/",
     github: "https://github.com/Barrelrolla/personal-resume",
-  },
-  {
-    id: "next.js project",
-    img: nextLogo,
-    imgClass: "scale-50 object-contain group-hover:scale-55 transition py-20",
-    bgColor: "#fff",
-    title: "NextJS project",
-    description: "A NextJS I'm currently working on.",
-    fullInfo: "A NextJS I'm currently working on.",
   },
 ];
