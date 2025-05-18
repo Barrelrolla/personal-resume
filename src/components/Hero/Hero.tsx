@@ -18,8 +18,10 @@ export default function Hero() {
     >
       <HeroSection className="flex-1/2 items-center md:order-last overflow-x-visible relative">
         <Ring />
-        <HeroTitle className="text-4xl font-medium sm:text-6xl xl:text-8xl relative z-1 hero-text-shadow md:max-w-[500px] text-center">
-          Julian Teofilov
+        <HeroTitle className="text-5xl font-medium sm:text-6xl xl:text-8xl relative z-1 hero-text-shadow text-center">
+          Julian
+          <br />
+          Teofilov
         </HeroTitle>
         <HeroText className="font-semibold sm:text-2xl xl:text-4xl relative z-1">
           UI Developer
