@@ -25,7 +25,7 @@ export default function Navbar() {
             key={link.path}
             as={Link}
             to={`/${link.path}`}
-            data-selected={path === `/${link.path}`}
+            data-selected={path.includes(`/${link.path}`)}
           >
             {link.path}
           </NavbarLink>
