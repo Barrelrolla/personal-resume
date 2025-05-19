@@ -44,7 +44,7 @@ export default function BioContent({ bioData, title }: BioContentProps) {
             <BioCard
               key={data.id}
               bio={data}
-              category="education"
+              category={data.category}
               index={index}
             />
           );
