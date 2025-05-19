@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useLocation, useParams } from "react-router";
 import {
   Anchor,
   Button,
@@ -10,7 +10,7 @@ import {
 } from "@barrelrolla/react-components-library";
 import BasePage from "../components/Page/BasePage";
 import { getBioData } from "../util/dataHelper";
-import { BioDataType } from "../data/bio";
+import { BioCategory, BioDataType } from "../data/bio";
 import NotFoundContent from "../components/Page/NotFoundContent";
 import { motion } from "motion/react";
 
@@ -18,9 +18,13 @@ export default function DetailsPage() {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState<BioDataType | undefined>(undefined);
   const { id } = useParams();
+  const location = useLocation();
 
   useEffect(() => {
-    const foundData = getBioData(id || "");
+    const foundData = getBioData(
+      id || "",
+      location.pathname.split("/")[1] as BioCategory,
+    );
     setData(foundData);
     if (foundData) {
       document.title = `Julian Teofilov | ${foundData.title}`;

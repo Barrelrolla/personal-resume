@@ -1,16 +1,35 @@
-import { educationData, experienceData, projectsData } from "../data/bio";
+import {
+  BioCategory,
+  educationData,
+  experienceData,
+  projectsData,
+} from "../data/bio";
 
-export function getBioData(id: string) {
-  const exp = experienceData.filter((data) => data.id === id);
-  if (exp.length > 0) {
-    return exp[0];
-  }
-  const edu = educationData.filter((data) => data.id === id);
-  if (edu.length > 0) {
-    return edu[0];
-  }
-  const pro = projectsData.filter((data) => data.id === id);
-  if (pro.length > 0) {
-    return pro[0];
+export function getBioData(id: string, category: BioCategory) {
+  let data;
+  switch (category) {
+    case "experience":
+      data = experienceData.filter((data) => data.id === id);
+      if (data.length > 0) {
+        return data[0];
+      }
+      break;
+
+    case "education":
+      data = educationData.filter((data) => data.id === id);
+      if (data.length > 0) {
+        return data[0];
+      }
+      break;
+
+    case "projects":
+      data = projectsData.filter((data) => data.id === id);
+      if (data.length > 0) {
+        return data[0];
+      }
+      break;
+
+    default:
+      break;
   }
 }
