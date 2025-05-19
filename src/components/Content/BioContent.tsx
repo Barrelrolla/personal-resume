@@ -35,7 +35,7 @@ export default function BioContent({ bioData, title }: BioContentProps) {
                 bio={data}
                 initial={"hidden"}
                 whileInView={"visible"}
-                category="education"
+                category={data.category}
                 index={index}
               />
             );

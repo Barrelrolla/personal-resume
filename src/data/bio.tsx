@@ -44,6 +44,7 @@ export type BioCategory = "experience" | "education" | "projects";
 
 export type BioDataType = {
   id: string;
+  category: BioCategory;
   img: string;
   title: string;
   specialty?: string;
@@ -59,6 +60,7 @@ export type BioDataType = {
 export const experienceData: BioDataType[] = [
   {
     id: "ubisoft",
+    category: "experience",
     img: ubiLogo,
     title: "Ubisoft",
     specialty: "UI Programmer",
@@ -71,6 +73,7 @@ export const experienceData: BioDataType[] = [
   },
   {
     id: "melontech",
+    category: "experience",
     img: melonLogo,
     title: "Melontech",
     specialty: "Front-end developer",
@@ -85,6 +88,7 @@ export const experienceData: BioDataType[] = [
   },
   {
     id: "ubisoft-tester",
+    category: "experience",
     img: ubiLogo,
     title: "Ubisoft",
     specialty: "UI Programmer",
@@ -99,6 +103,7 @@ export const experienceData: BioDataType[] = [
 export const educationData: BioDataType[] = [
   {
     id: "telerik",
+    category: "education",
     img: telerikLogo,
     title: "Telerik Academy",
     specialty: "web and mobile development",
@@ -113,6 +118,7 @@ export const educationData: BioDataType[] = [
   },
   {
     id: "ibs",
+    category: "education",
     img: ibsLogo,
     title: "International Business School Botevgrad",
     description: "I studied international business relations.",
@@ -128,6 +134,7 @@ export const educationData: BioDataType[] = [
 export const projectsData: BioDataType[] = [
   {
     id: "next.js-project",
+    category: "projects",
     img: nextLogo,
     imgClass: "scale-50 object-contain group-hover:scale-55 transition py-20",
     bgColor: "#fff",
@@ -137,6 +144,7 @@ export const projectsData: BioDataType[] = [
   },
   {
     id: "react-components-library",
+    category: "projects",
     img: libraryLogo,
     bgColor: "#1b1c1d",
     imgClass: "card-image scale-90 group-hover:scale-100",
@@ -149,6 +157,7 @@ export const projectsData: BioDataType[] = [
   },
   {
     id: "personal-resume",
+    category: "projects",
     img: resumeLogo,
     title: "Personal resume",
     description: "My personal resume website.",
