@@ -1,12 +1,10 @@
 import { Outlet } from "react-router";
-import PageTitle from "../components/ui/PageTitle";
-import { Divider } from "@barrelrolla/react-components-library";
+import PageTitleWithDivider from "../components/ui/PageTitleWithDivider";
 
 export default function BioLayout({ title }: { title: string }) {
   return (
     <>
-      <PageTitle>{title}</PageTitle>
-      <Divider width={2} className="w-3/4" />
+      <PageTitleWithDivider>{title}</PageTitleWithDivider>
       <Outlet />
     </>
   );

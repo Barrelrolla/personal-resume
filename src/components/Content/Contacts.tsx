@@ -1,17 +1,21 @@
-import { Anchor } from "@barrelrolla/react-components-library";
 import PageContent from "../Page/PageContent";
 import { contacts } from "../../data/bio";
 import { motion } from "motion/react";
+import { MotionAnchor } from "../motion/motion";
 
 export default function Contacts() {
   return (
     <PageContent>
-      <motion.div
-        initial={{ opacity: 0, translateY: -100 }}
-        animate={{ opacity: 1, translateY: 0 }}
-        className="mt-6 space-y-2"
-      >
-        <div className="md:grid-left grid-cols-2 md:grid md:gap-2">
+      <motion.div className="mt-6 space-y-2">
+        <motion.div
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.05 } },
+          }}
+          initial={"hidden"}
+          animate={"visible"}
+          className="md:grid-left grid-cols-2 md:grid md:gap-2"
+        >
           {contacts.map((contact) => (
             <Contact
               key={contact.title}
@@ -20,7 +24,7 @@ export default function Contacts() {
               url={contact.url}
             />
           ))}
-        </div>
+        </motion.div>
       </motion.div>
     </PageContent>
   );
@@ -34,10 +38,26 @@ type ContactProps = {
 function Contact({ title, url, text }: ContactProps) {
   return (
     <>
-      <p className="max-md:mt-4">{title + ": "}</p>
-      <Anchor className="w-fit" href={url} target="_blank">
+      <motion.p
+        variants={{
+          hidden: { opacity: 0, translateY: 20 },
+          visible: { opacity: 1, translateY: 0 },
+        }}
+        className="max-md:mt-4"
+      >
+        {title + ": "}
+      </motion.p>
+      <MotionAnchor
+        variants={{
+          hidden: { opacity: 0, translateY: 20 },
+          visible: { opacity: 1, translateY: 0 },
+        }}
+        className="w-fit"
+        href={url}
+        target="_blank"
+      >
         {text}
-      </Anchor>
+      </MotionAnchor>
     </>
   );
 }

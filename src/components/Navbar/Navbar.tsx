@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <BarrelrollaNavbar collapseAt="md">
       <motion.div
-        initial={{ opacity: 0, translateX: -100 }}
+        initial={{ opacity: 0, translateX: -50 }}
         animate={{ opacity: 1, translateX: 0 }}
         className="md:w-[130px]"
       >
@@ -24,7 +24,7 @@ export default function Navbar() {
         </NavbarBrand>
       </motion.div>
       <MotionCollapse
-        initial={{ opacity: 0, translateY: -50 }}
+        initial={{ opacity: 0, translateY: -20 }}
         animate={{ opacity: 1, translateY: 0 }}
         className="md:space-x-6"
       >
@@ -40,7 +40,7 @@ export default function Navbar() {
         ))}
       </MotionCollapse>
       <motion.div
-        initial={{ opacity: 0, translateX: 100 }}
+        initial={{ opacity: 0, translateX: 50 }}
         animate={{ opacity: 1, translateX: 0 }}
         className="flex flex-wrap items-center gap-4 md:w-[130px]"
       >

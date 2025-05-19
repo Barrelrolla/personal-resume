@@ -54,7 +54,7 @@ export default function DetailsPage() {
       {!data && <NotFoundContent title="Content" />}
       {data && (
         <motion.div
-          initial={{ opacity: 0, translateY: -100 }}
+          initial={{ opacity: 0, translateY: -20 }}
           animate={{ opacity: 1, translateY: 0 }}
           className="mt-6 flex flex-col items-center"
         >

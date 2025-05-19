@@ -21,7 +21,6 @@ export default function Hero() {
         <MotionHeroTitle
           initial={{ opacity: 0, translateY: -100 }}
           animate={{ opacity: 1, translateY: 0 }}
-          transition={{ delay: 0.2 }}
           className="relative z-1 text-center text-5xl font-medium sm:text-6xl xl:text-8xl"
         >
           Julian
@@ -29,8 +28,9 @@ export default function Hero() {
           Teofilov
         </MotionHeroTitle>
         <motion.h2
-          initial={{ opacity: 0, translateY: -100 }}
+          initial={{ opacity: 0, translateY: -20 }}
           animate={{ opacity: 1, translateY: 0 }}
+          transition={{ delay: 0.2 }}
           className="relative z-1 font-semibold sm:text-2xl xl:text-4xl"
         >
           UI Developer
@@ -38,7 +38,7 @@ export default function Hero() {
       </HeroSection>
       <MotionHeroSection
         className="flex-1/2 font-sans max-md:justify-start"
-        initial={{ opacity: 0, translateX: -100 }}
+        initial={{ opacity: 0, translateX: -50 }}
         animate={{ opacity: 1, translateX: 0 }}
         transition={{ delay: 0.4 }}
       >
