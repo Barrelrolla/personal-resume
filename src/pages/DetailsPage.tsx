@@ -12,6 +12,7 @@ import BasePage from "../components/Page/BasePage";
 import { getBioData } from "../util/dataHelper";
 import { BioDataType } from "../data/bio";
 import NotFoundContent from "../components/Page/NotFoundContent";
+import { motion } from "motion/react";
 
 export default function DetailsPage() {
   const [loading, setLoading] = useState(true);
@@ -37,9 +38,13 @@ export default function DetailsPage() {
   if (loading) {
     return (
       <BasePage>
-        <div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0 }}
+          transition={{ delay: 0.2 }}
+        >
           <Spinner className="mx-auto mt-20 text-9xl" strokeWidth={4} />
-        </div>
+        </motion.div>
       </BasePage>
     );
   }
@@ -48,7 +53,11 @@ export default function DetailsPage() {
     <BasePage>
       {!data && <NotFoundContent title="Content" />}
       {data && (
-        <div className="mt-6 flex flex-col items-center">
+        <motion.div
+          initial={{ opacity: 0, translateY: -100 }}
+          animate={{ opacity: 1, translateY: 0 }}
+          className="mt-6 flex flex-col items-center"
+        >
           <Card containerClasses="border-transparent mb-6">
             <CardImageContainer
               style={{ backgroundColor: data.bgColor || "#000" }}
@@ -81,7 +90,7 @@ export default function DetailsPage() {
               Repo
             </Button>
           )}
-        </div>
+        </motion.div>
       )}
     </BasePage>
   );

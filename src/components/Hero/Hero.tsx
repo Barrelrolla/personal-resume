@@ -3,10 +3,11 @@ import {
   Button,
   HeroActions,
   HeroSection,
-  HeroTitle,
 } from "@barrelrolla/react-components-library";
 import Ring from "../Ring/Ring";
 import { Link } from "react-router";
+import { MotionHeroSection, MotionHeroTitle } from "../motion/motion";
+import { motion } from "motion/react";
 
 export default function Hero() {
   return (
@@ -17,16 +18,30 @@ export default function Hero() {
     >
       <HeroSection className="relative flex-1/2 items-center overflow-x-visible md:order-last">
         <Ring />
-        <HeroTitle className="relative z-1 text-center text-5xl font-medium sm:text-6xl xl:text-8xl">
+        <MotionHeroTitle
+          initial={{ opacity: 0, translateY: -100 }}
+          animate={{ opacity: 1, translateY: 0 }}
+          transition={{ delay: 0.2 }}
+          className="relative z-1 text-center text-5xl font-medium sm:text-6xl xl:text-8xl"
+        >
           Julian
           <br />
           Teofilov
-        </HeroTitle>
-        <h2 className="relative z-1 font-semibold sm:text-2xl xl:text-4xl">
+        </MotionHeroTitle>
+        <motion.h2
+          initial={{ opacity: 0, translateY: -100 }}
+          animate={{ opacity: 1, translateY: 0 }}
+          className="relative z-1 font-semibold sm:text-2xl xl:text-4xl"
+        >
           UI Developer
-        </h2>
+        </motion.h2>
       </HeroSection>
-      <HeroSection className="flex-1/2 font-sans max-md:justify-start">
+      <MotionHeroSection
+        className="flex-1/2 font-sans max-md:justify-start"
+        initial={{ opacity: 0, translateX: -100 }}
+        animate={{ opacity: 1, translateX: 0 }}
+        transition={{ delay: 0.4 }}
+      >
         <p className="text-pretty">
           I'm a UI developer with 8 years of experience in front-end web and
           video game UI development. Skilled in C++, C#, JavaScript, TypeScript,
@@ -42,7 +57,7 @@ export default function Hero() {
             My contacts
           </Button>
         </HeroActions>
-      </HeroSection>
+      </MotionHeroSection>
     </BarrelrollaHero>
   );
 }

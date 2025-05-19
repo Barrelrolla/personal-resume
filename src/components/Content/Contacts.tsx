@@ -1,11 +1,16 @@
 import { Anchor } from "@barrelrolla/react-components-library";
 import PageContent from "../Page/PageContent";
 import { contacts } from "../../data/bio";
+import { motion } from "motion/react";
 
 export default function Contacts() {
   return (
     <PageContent>
-      <div className="mt-6 space-y-2">
+      <motion.div
+        initial={{ opacity: 0, translateY: -100 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        className="mt-6 space-y-2"
+      >
         <div className="md:grid-left grid-cols-2 md:grid md:gap-2">
           {contacts.map((contact) => (
             <Contact
@@ -16,7 +21,7 @@ export default function Contacts() {
             />
           ))}
         </div>
-      </div>
+      </motion.div>
     </PageContent>
   );
 }

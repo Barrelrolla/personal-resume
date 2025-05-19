@@ -5,6 +5,7 @@ import Hero from "../components/Hero/Hero";
 import Education from "../components/Content/Education";
 import Projects from "../components/Content/Projects";
 import BasePage from "../components/Page/BasePage";
+import { motion } from "motion/react";
 
 export default function HomePage() {
   document.title = "Julian Teofilov";
@@ -45,21 +46,29 @@ export default function HomePage() {
     <BasePage>
       <Hero />
       {needButton && (
-        <Button
-          ref={buttonRef}
-          aria-label="scroll down"
-          variant="outline"
-          radius="pill"
-          size="xl"
-          startIcon={<CaretIcon />}
-          wrapperClasses="absolute bottom-4 animate-bounce left-[calc(50%-28px)]"
-          onClick={() => {
-            buttonRef.current?.parentElement?.classList.add("animate-fade-out");
-            bioRef.current?.scrollIntoView({
-              behavior: "smooth",
-            });
-          }}
-        ></Button>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.4 }}
+        >
+          <Button
+            ref={buttonRef}
+            aria-label="scroll down"
+            variant="outline"
+            radius="pill"
+            size="xl"
+            startIcon={<CaretIcon />}
+            wrapperClasses="absolute bottom-4 animate-bounce left-[calc(50%-28px)]"
+            onClick={() => {
+              buttonRef.current?.parentElement?.classList.add(
+                "animate-fade-out",
+              );
+              bioRef.current?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          ></Button>
+        </motion.div>
       )}
       <section
         className="space-y-14"
