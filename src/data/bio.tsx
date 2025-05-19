@@ -106,7 +106,7 @@ export const educationData: BioDataType[] = [
       "I studied programming basics with C#, back-end with Node.js and C#, HTML, CSS, JavaScript, TypeScript, Angular, iOS and Android.",
     fullInfo:
       "In this one-year course I learned programming basics using C#; web development, both front-end using JavaScript, and back-end using node.js; mobile applications for iOS and Android; and working with data bases. I graduated with one of the best results during my year.",
-    dates: "March 2016 - March 2017",
+    dates: "2016 - 2017",
     imgClass: "scale-90 object-contain group-hover:scale-100 transition py-14",
     website: "https://www.telerikacademy.com/",
     bgColor: "#fff",
@@ -118,7 +118,7 @@ export const educationData: BioDataType[] = [
     description: "I studied international business relations.",
     fullInfo: "I studied international business relations.",
     specialty: "International Business Relations",
-    dates: "March 2016 - March 2017",
+    dates: "2010 - 2014",
     imgClass: "scale-90 object-contain group-hover:scale-100 transition py-14",
     website: "https://ibsedu.bg/",
     bgColor: "#fff",
