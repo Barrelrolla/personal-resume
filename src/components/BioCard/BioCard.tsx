@@ -45,14 +45,14 @@ export default function BioCard({
   };
   return (
     <motion.div
-      className="group flex w-full flex-col"
+      className="group/wrapper flex flex-col"
       variants={child}
       {...rest}
       viewport={{ amount: 0.5, once: true }}
       transition={{ duration: 0.3 }}
     >
       <Card
-        containerClasses="group-odd:self-start group-even:self-end max-w-4xl"
+        containerClasses="group-odd/wrapper:self-start group-even/wrapper:self-end max-w-4xl"
         key={title}
         color="main"
         className="h-full"
