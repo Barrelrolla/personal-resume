@@ -43,11 +43,11 @@ export default function Hero() {
         transition={{ delay: 0.4 }}
       >
         <p className="text-pretty">
-          I'm a UI developer with 8 years of experience in front-end web and
-          video game UI development. Skilled in C++, C#, JavaScript, TypeScript,
-          React, Unity, Phaser, and proprietary game engines. I've contributed
-          to AAA titles like The Division 2 and multiple Assassin's Creed games,
-          working in both small teams and large international studios.
+          UI Developer with 8 years of experience in both front-end web
+          development and video game UI. Skilled in C++, C#, JavaScript,
+          TypeScript, React, Phaser, Unity 3D, as well as multiple proprietary
+          game engines. I've contributed effectively in both small and large,
+          international teams on high-profile AAA titles.
         </p>
         <HeroActions className="justify-around gap-2">
           <Button as={Link} to="/projects" className="w-[145px]">

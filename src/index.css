@@ -9,6 +9,10 @@
   scrollbar-width: thin;
 }
 
+p>ol>li {
+  @apply list-disc list-inside my-4;
+}
+
 :root {
   --color-main: #dad6cf;
   --color-main-content: #4c5c5a;

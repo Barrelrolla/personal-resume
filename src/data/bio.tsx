@@ -1,4 +1,5 @@
 import ubiLogo from "../assets/ubisoft_logo.avif";
+import ubiLogo2 from "../assets/ubisoft_logo_2.jpg";
 import melonLogo from "../assets/melon_logo.svg";
 import telerikLogo from "../assets/telerik_logo.png";
 import ibsLogo from "../assets/ibs_logo.webp";
@@ -65,9 +66,9 @@ export const experienceData: BioDataType[] = [
     title: "Ubisoft",
     specialty: "UI Programmer",
     description:
-      "I contributed to multiple AAA projects like The Division 2, Assassin's Creed: Mirage, Assassin's Creed: Shadows and others.",
+      "Worked on multiple AAA projects like The <i>Division 2, Assassin's Creed: Mirage, Assassin's Creed: Shadows</i> and others.",
     fullInfo:
-      "As a UI Programmer in Ubisoft, I have worked on multiple AAA video games, such as The Division 2, Assassin's Creed Valhalla: Dawn of Ragnarok, Assassin's Creed Mirage and Assassin's Creed Shadows. I have developed different HUD elements and menu pages in the game, and maintained others. In The Division 2 I was responsible for the in-game currency store while in Assassin's Creed I have worked on many HUD elements in different projects, as well as several menu pages. I have used tools like Jira, Confluence, Perfoce and many others to help with organizing tasks, documentation and source control.\n\nEvery project I have worked on comes with it's own set of challenges, but I am experienced in optimizing and debugging code, finding issues and delivering projects with a tight deadline.",
+      "Worked on multiple AAA video game titles, including <i>The Division 2, Assassin's Creed Valhalla: Dawn of Ragnarok, Assassin's Creed Mirage, Assassin's Creed Shadows</i> and others. Developed, maintained, and optimized a wide range of HUD elements and menus across several projects.<ol><li>Implemented the in-game currency store menu page for The Division 2.</li><li>Implemented numerous HUD components and menu pages in Assassin's Creed titles, collaborating closely with designers and gameplay programmers.</li><li>Regularly optimized and debugged UI systems, delivering high-quality features under tight deadlines.</li><li>Used tools like Jira and Confluence for task management and documentation, and Perforce for version control.</li><li>Adapted quickly to the unique requirements and constraints of each project, consistently delivering results.</li></ol>",
     dates: "April 2018 - Present",
     website: "https://www.ubisoft.com/",
   },
@@ -78,9 +79,9 @@ export const experienceData: BioDataType[] = [
     title: "Melontech",
     specialty: "Front-end developer",
     description:
-      "I worked on front-end applications in different frameworks like Phaser and React.",
+      "Worked on a variety of projects, including a web-based game using Phaser and TypeScript, as well as a front-end web application built with React.",
     fullInfo:
-      "As a front-end developer I have worked on several different projects , a web-based game using Phaser and TypeScript, a couple front-end web applications, one using Angular and the other using React, creating reusable components as well as creating libraries for use on other projects.\n\nEvery project I have worked on during my time there used a different framework and a different variation of JavaScript. I have proven my ability to learn new technologies and adapt fast.\n\nI have used REST APIs, unit tests as well as tools like Jira, webpack, Git and many others to help with the development process.",
+      "Worked on a variety of projects, including a web-based game using Phaser and TypeScript, as well as a front-end web application built with React. Focused on creating reusable components and developing libraries for cross-project use.<ol><li>Developed and maintained a web-based game using Phaser and TypeScript, implementing interactive UI elements and optimizing performance.</li><li>Built scalable and maintainable front-end solutions using React, contributing to high-quality web applications with a focus on reusability and modular design.</li><li>Adapted quickly to different frameworks and JavaScript variations, demonstrating a strong ability to learn new technologies and deliver results on time.</li><li>Utilized REST APIs for seamless data integration and unit testing to ensure quality.</li><li>Used Jira for task management, Webpack for module bundling, and Git for version control, ensuring a smooth development workflow.</ol>",
     dates: "April 2017 - April 2018",
     website: "https://oldmelon.melontech.com/",
     bgColor: "#183f57",
@@ -89,13 +90,13 @@ export const experienceData: BioDataType[] = [
   {
     id: "ubisoft-tester",
     category: "experience",
-    img: ubiLogo,
+    img: ubiLogo2,
     title: "Ubisoft",
     specialty: "Development tester",
-    description: "I helped defining testing workflows and maintaining Jira.",
+    description:
+      "Worked on projects from early development stages, providing feedback on design documents and newly implemented features.",
     fullInfo:
-      "As a Development Tester I worked on projects from their very beginning. I had to provide feedback on design documents and later test and give feedback on features. Securing working builds for reviews and milestones was also a huge part of the job. As I was one of the first development testers in the studio and we had a lot of build stability issues at the time, I helped a lot in creating a workflow that would allow us to have stable builds and integrate changes without major issues.",
-    dates: "March 2012 - March 2017",
+      "Worked on projects from early development stages, providing feedback on design documents and newly implemented features. Helped ensuring build stability and supporting milestone deliveries.<ol><li>Reviewed design documentation and early prototypes, offering feedback to improve gameplay and usability.</li><li>Tested and validated new features throughout development, identifying issues and collaborating closely with developers to ensure quality.</li><li>Helped securing working builds for internal reviews and major milestones, often under tight deadlines.</li><li>As one of the studio’s first development testers, contributed significantly to establishing workflows and processes that improved build stability and streamlined integration.</li></ol>",
     website: "https://www.ubisoft.com/",
   },
 ];
@@ -108,9 +109,9 @@ export const educationData: BioDataType[] = [
     title: "Telerik Academy",
     specialty: "web and mobile development",
     description:
-      "I studied programming basics with C#, back-end with Node.js and C#, HTML, CSS, JavaScript, TypeScript, Angular, iOS and Android.",
+      "Completed an intensive one-year program covering a wide range of development disciplines graduating among the highest-performing students in the group.",
     fullInfo:
-      "In this one-year course I learned programming basics using C#; web development, both front-end using JavaScript, and back-end using node.js; mobile applications for iOS and Android; and working with data bases. I graduated with one of the best results during my year.",
+      "Completed an intensive one-year program covering a wide range of development disciplines, including:<ol><li>Programming fundamentals using C#</li><li>Front-end web development with JavaScript</li><li>Back-end development with Node.js</li><li>Mobile applications for iOS and Android</li><li>Database design and management</li></ol>Graduated among the highest-performing students in the group.",
     dates: "2016 - 2017",
     imgClass: "scale-90 object-contain group-hover:scale-100 transition py-14",
     website: "https://www.telerikacademy.com/",
@@ -120,7 +121,7 @@ export const educationData: BioDataType[] = [
     id: "ibs",
     category: "education",
     img: ibsLogo,
-    title: "International Business School Botevgrad",
+    title: "International Business School of Bulgaria",
     description: "I studied international business relations.",
     fullInfo: "I studied international business relations.",
     specialty: "International Business Relations",

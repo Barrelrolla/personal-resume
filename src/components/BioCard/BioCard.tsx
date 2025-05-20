@@ -34,7 +34,10 @@ export default function BioCard({
   }, [bio]);
 
   const child: Variants = {
-    hidden: { opacity: 0, translateX: index && index % 2 ? 30 : -30 },
+    hidden: {
+      opacity: 0,
+      translateX: index && index % 2 ? 50 : -50,
+    },
     visible: {
       opacity: 1,
       translateX: 0,
@@ -46,6 +49,7 @@ export default function BioCard({
       variants={child}
       {...rest}
       viewport={{ amount: 0.5, once: true }}
+      transition={{ duration: 0.3 }}
     >
       <Card
         containerClasses="group-odd:self-start group-even:self-end max-w-4xl"
@@ -81,7 +85,7 @@ export default function BioCard({
             <CardTitle className="pb-0">{title}</CardTitle>
             {specialty && <p className="px-4 pb-2 font-normal">{specialty}</p>}
             {dates && <p className="px-4">{dates}</p>}
-            <CardText>{description}</CardText>
+            <CardText dangerouslySetInnerHTML={{ __html: description }} />
           </CardSection>
         </CardInteract>
       </Card>
