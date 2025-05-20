@@ -16,6 +16,7 @@ import { navLinks } from "./data/navLinks";
 import "./index.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { MotionConfig } from "motion/react";
 
 const navRoutes: NonIndexRouteObject[] = navLinks.map((link) => {
   return {
@@ -53,9 +54,11 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeContextProvider value={{ buttonsRetainFocus: false }}>
-      <RouterProvider router={router} />
-      <Analytics />
-      <SpeedInsights />
+      <MotionConfig reducedMotion="user">
+        <RouterProvider router={router} />
+        <Analytics />
+        <SpeedInsights />
+      </MotionConfig>
     </ThemeContextProvider>
   </StrictMode>,
 );
