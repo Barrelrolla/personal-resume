@@ -91,7 +91,7 @@ export const experienceData: BioDataType[] = [
     category: "experience",
     img: ubiLogo,
     title: "Ubisoft",
-    specialty: "UI Programmer",
+    specialty: "Development tester",
     description: "I helped defining testing workflows and maintaining Jira.",
     fullInfo:
       "As a Development Tester I worked on projects from their very beginning. I had to provide feedback on design documents and later test and give feedback on features. Securing working builds for reviews and milestones was also a huge part of the job. As I was one of the first development testers in the studio and we had a lot of build stability issues at the time, I helped a lot in creating a workflow that would allow us to have stable builds and integrate changes without major issues.",

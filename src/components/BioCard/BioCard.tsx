@@ -22,7 +22,8 @@ export default function BioCard({
   index?: number;
 } & MotionProps) {
   const [loading, setLoading] = useState(true);
-  const { id, title, img, imgClass, bgColor, description, dates } = bio;
+  const { id, title, specialty, img, imgClass, bgColor, description, dates } =
+    bio;
 
   useEffect(() => {
     const image = new Image();
@@ -77,7 +78,8 @@ export default function BioCard({
             </CardImageContainer>
           </CardSection>
           <CardSection className="flex-1/2">
-            <CardTitle>{title}</CardTitle>
+            <CardTitle className="pb-0">{title}</CardTitle>
+            {specialty && <p className="px-4 pb-2 font-normal">{specialty}</p>}
             {dates && <p className="px-4">{dates}</p>}
             <CardText>{description}</CardText>
           </CardSection>
