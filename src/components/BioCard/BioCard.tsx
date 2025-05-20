@@ -64,7 +64,7 @@ export default function BioCard({
           aria-label={`${title} link`}
           style={{ "--h": "calc(var(--mod-highlight) * -1)" } as CSSProperties}
         >
-          <CardSection className="flex-1/2 @md:group-even:order-last">
+          <CardSection className="flex-1/2 @md:group-even/wrapper:order-last">
             <CardImageContainer
               className="flex items-center"
               style={{
