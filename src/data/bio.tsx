@@ -4,7 +4,8 @@ import melonLogo from "../assets/melon_logo.svg";
 import telerikLogo from "../assets/telerik_logo.png";
 import ibsLogo from "../assets/ibs_logo.webp";
 import libraryLogo from "../assets/react_components_library_logo.png";
-import resumeLogo from "../assets/resume_logo.png";
+import resumeLogo from "../assets/resume_logo.jpg";
+import resumeLogoDark from "../assets/resume_logo_dark.jpg";
 import nextLogo from "../assets/next_logo.svg";
 
 import {
@@ -47,6 +48,7 @@ export type BioDataType = {
   id: string;
   category: BioCategory;
   img: string;
+  imgDark?: string;
   title: string;
   specialty?: string;
   description: string;
@@ -160,7 +162,8 @@ export const projectsData: BioDataType[] = [
   {
     id: "personal-resume",
     category: "projects",
-    img: resumeLogo,
+    img: resumeLogoDark,
+    imgDark: resumeLogo,
     title: "Personal resume",
     description: "My personal resume website.",
     fullInfo: "A personal resume website I built using my component library.",

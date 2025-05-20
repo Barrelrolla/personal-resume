@@ -7,6 +7,7 @@ import {
   CardSection,
   CardText,
   CardTitle,
+  useTheme,
 } from "@barrelrolla/react-components-library";
 import { BioCategory, BioDataType } from "../../data/bio";
 import { motion, MotionProps, Variants } from "motion/react";
@@ -22,27 +23,29 @@ export default function BioCard({
   index?: number;
 } & MotionProps) {
   const [loading, setLoading] = useState(true);
-  const { id, title, specialty, img, imgClass, bgColor, description, dates } =
-    bio;
+  const { id, title, specialty, imgClass, bgColor, description, dates } = bio;
+  const themeContext = useTheme();
+  const img = themeContext?.isDark && bio.imgDark ? bio.imgDark : bio.img;
 
   useEffect(() => {
     const image = new Image();
     image.onload = () => {
       setLoading(false);
     };
-    image.src = bio.img;
-  }, [bio]);
+    image.src = img;
+  }, [img]);
 
   const child: Variants = {
     hidden: {
       opacity: 0,
-      translateX: index && index % 2 ? 50 : -50,
+      translateX: index && index % 2 ? 100 : -100,
     },
     visible: {
       opacity: 1,
       translateX: 0,
     },
   };
+
   return (
     <motion.div
       className="group/wrapper w-full flex flex-col"
@@ -52,7 +55,7 @@ export default function BioCard({
       transition={{ duration: 0.3 }}
     >
       <Card
-        containerClasses="group-odd/wrapper:self-start group-even/wrapper:self-end max-w-4xl"
+        containerClasses="group-odd/wrapper:self-start group-even/wrapper:self-end border-none max-w-4xl"
         key={title}
         color="main"
         className="h-full"
@@ -60,7 +63,7 @@ export default function BioCard({
         <CardInteract
           as={Link}
           to={`/${category}/${id}`}
-          className="flex flex-col @md:h-56 @md:flex-row"
+          className="flex flex-col @md:h-56 @md:flex-row inset-ring"
           aria-label={`${title} link`}
           style={{ "--h": "calc(var(--mod-highlight) * -1)" } as CSSProperties}
         >

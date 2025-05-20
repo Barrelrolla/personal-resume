@@ -7,6 +7,7 @@ import {
   CardImageContainer,
   GitHubIcon,
   Spinner,
+  useTheme,
 } from "@barrelrolla/react-components-library";
 import BasePage from "../components/Page/BasePage";
 import { getBioData } from "../util/dataHelper";
@@ -19,6 +20,7 @@ export default function DetailsPage() {
   const [data, setData] = useState<BioDataType | undefined>(undefined);
   const { id } = useParams();
   const location = useLocation();
+  const theme = useTheme();
 
   useEffect(() => {
     const foundData = getBioData(
@@ -27,24 +29,26 @@ export default function DetailsPage() {
     );
     setData(foundData);
     if (foundData) {
+      console.log(theme);
       document.title = `Julian Teofilov | ${foundData.title}`;
       const image = new Image();
       image.onload = () => {
         setLoading(false);
       };
-      image.src = foundData.img;
+      image.src =
+        theme?.isDark && foundData.imgDark ? foundData.imgDark : foundData.img;
     } else {
       document.title = "Julian Teofilov | Not Found";
       setLoading(false);
     }
-  }, [id, location.pathname]);
+  }, [id, location.pathname, theme]);
 
   if (loading) {
     return (
       <BasePage>
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
           <Spinner className="mx-auto mt-20 text-9xl" strokeWidth={4} />
@@ -68,7 +72,7 @@ export default function DetailsPage() {
             >
               <img
                 className={data.imgClass}
-                src={data.img}
+                src={theme?.isDark && data.imgDark ? data.imgDark : data.img}
                 alt={`${data.title} logo`}
               />
             </CardImageContainer>
