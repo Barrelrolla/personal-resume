@@ -48,7 +48,7 @@ export default function BioCard({
       className="group/wrapper flex flex-col"
       variants={child}
       {...rest}
-      viewport={{ amount: 0.5, once: true }}
+      viewport={{ amount: 0.3, once: true }}
       transition={{ duration: 0.3 }}
     >
       <Card
