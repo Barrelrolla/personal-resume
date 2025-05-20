@@ -29,7 +29,6 @@ export default function DetailsPage() {
     );
     setData(foundData);
     if (foundData) {
-      console.log(theme);
       document.title = `Julian Teofilov | ${foundData.title}`;
       const image = new Image();
       image.onload = () => {
