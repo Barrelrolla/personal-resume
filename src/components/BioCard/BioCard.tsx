@@ -33,7 +33,7 @@ export default function BioCard({
   }, [bio]);
 
   const child: Variants = {
-    hidden: { opacity: 0, translateX: index && index % 2 ? 50 : -50 },
+    hidden: { opacity: 0, translateX: index && index % 2 ? 30 : -30 },
     visible: {
       opacity: 1,
       translateX: 0,

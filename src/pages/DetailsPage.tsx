@@ -37,7 +37,7 @@ export default function DetailsPage() {
       document.title = "Julian Teofilov | Not Found";
       setLoading(false);
     }
-  }, [id]);
+  }, [id, location.pathname]);
 
   if (loading) {
     return (
