@@ -46,7 +46,7 @@ export default function Hero() {
           UI Developer with 8 years of experience in both front-end web
           development and video game UI. Skilled in C++, C#, JavaScript,
           TypeScript, React, Phaser, Unity 3D, as well as multiple proprietary
-          game engines. I've contributed effectively in both small and large,
+          game engines. Contributed effectively in both small and large,
           international teams on high-profile AAA titles.
         </p>
         <HeroActions className="justify-around gap-2">

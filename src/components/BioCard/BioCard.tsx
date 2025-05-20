@@ -45,7 +45,7 @@ export default function BioCard({
   };
   return (
     <motion.div
-      className="group/wrapper flex flex-col"
+      className="group/wrapper w-full flex flex-col"
       variants={child}
       {...rest}
       viewport={{ amount: 0.3, once: true }}
