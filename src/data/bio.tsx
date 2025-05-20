@@ -97,6 +97,7 @@ export const experienceData: BioDataType[] = [
       "Worked on projects from early development stages, providing feedback on design documents and newly implemented features.",
     fullInfo:
       "Worked on projects from early development stages, providing feedback on design documents and newly implemented features. Helped ensuring build stability and supporting milestone deliveries.<ol><li>Reviewed design documentation and early prototypes, offering feedback to improve gameplay and usability.</li><li>Tested and validated new features throughout development, identifying issues and collaborating closely with developers to ensure quality.</li><li>Helped securing working builds for internal reviews and major milestones, often under tight deadlines.</li><li>As one of the studio’s first development testers, contributed significantly to establishing workflows and processes that improved build stability and streamlined integration.</li></ol>",
+    dates: "March 2012 - March 2017",
     website: "https://www.ubisoft.com/",
   },
 ];
