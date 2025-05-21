@@ -7,16 +7,18 @@ import {
   NavbarToggle,
 } from "@barrelrolla/react-components-library";
 import { navLinks } from "../../data/navLinks";
-import { motion } from "motion/react";
+import { motion, Transition } from "motion/react";
 import { MotionCollapse } from "../motion/motion";
 
 export default function Navbar() {
   const path = useLocation().pathname;
+  const transition: Transition = { duration: 0.2 };
   return (
     <BarrelrollaNavbar collapseAt="md">
       <motion.div
-        initial={{ opacity: 0, translateX: -50 }}
+        initial={{ opacity: 0, translateX: -100 }}
         animate={{ opacity: 1, translateX: 0 }}
+        transition={transition}
         className="md:w-[130px]"
       >
         <NavbarBrand as={Link} className="w-min font-medium" to={"/"}>
@@ -24,8 +26,9 @@ export default function Navbar() {
         </NavbarBrand>
       </motion.div>
       <MotionCollapse
-        initial={{ opacity: 0, translateY: -20 }}
+        initial={{ opacity: 0, translateY: -50 }}
         animate={{ opacity: 1, translateY: 0 }}
+        transition={transition}
         className="md:space-x-6 capitalize"
       >
         {navLinks.map((link) => (
@@ -40,8 +43,9 @@ export default function Navbar() {
         ))}
       </MotionCollapse>
       <motion.div
-        initial={{ opacity: 0, translateX: 50 }}
+        initial={{ opacity: 0, translateX: 100 }}
         animate={{ opacity: 1, translateX: 0 }}
+        transition={transition}
         className="flex flex-wrap items-center gap-4 md:w-[130px]"
       >
         <Button
