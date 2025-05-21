@@ -63,11 +63,11 @@ export default function BioCard({
         <CardInteract
           as={Link}
           to={`/${category}/${id}`}
-          className="flex flex-col @md:h-56 @md:flex-row inset-ring"
+          className="flex flex-col @lg:h-56 @lg:flex-row inset-ring"
           aria-label={`${title} link`}
           style={{ "--h": "calc(var(--mod-highlight) * -1)" } as CSSProperties}
         >
-          <CardSection className="flex-1/2 @md:group-even/wrapper:order-last">
+          <CardSection className="flex-1/2 @lg:group-even/wrapper:order-last">
             <CardImageContainer
               className="flex items-center"
               style={{

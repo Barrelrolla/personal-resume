@@ -110,9 +110,9 @@ export const educationData: BioDataType[] = [
     category: "education",
     img: telerikLogo,
     title: "Telerik Academy",
-    specialty: "web and mobile development",
+    specialty: "Web and mobile development",
     description:
-      "Completed an intensive one-year program covering a wide range of development disciplines graduating among the highest-performing students in the group.",
+      "Completed an intensive one-year program covering a wide range of development disciplines.",
     fullInfo:
       "Completed an intensive one-year program covering a wide range of development disciplines, including:<ol><li>Programming fundamentals using C#</li><li>Front-end web development with JavaScript</li><li>Back-end development with Node.js</li><li>Mobile applications for iOS and Android</li><li>Database design and management</li></ol>Graduated among the highest-performing students in the group.",
     dates: "2016 - 2017",
@@ -127,7 +127,7 @@ export const educationData: BioDataType[] = [
     title: "International Business School of Bulgaria",
     description: "I studied international business relations.",
     fullInfo: "I studied international business relations.",
-    specialty: "International Business Relations",
+    specialty: "Bachelor's degree in International Business Relations",
     dates: "2010 - 2014",
     imgClass: "scale-90 object-contain group-hover:scale-100 transition py-14",
     website: "https://ibsedu.bg/",
@@ -151,7 +151,7 @@ export const projectsData: BioDataType[] = [
     category: "projects",
     img: libraryLogo,
     bgColor: "#1b1c1d",
-    imgClass: "card-image scale-90 group-hover:scale-100",
+    imgClass: "object-cover transition scale-90 group-hover:scale-100",
     title: "React components library",
     description: "A react components library I build for my personal projects.",
     fullInfo:
