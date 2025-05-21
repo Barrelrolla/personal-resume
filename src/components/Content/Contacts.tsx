@@ -1,7 +1,7 @@
+import { motion } from "motion/react";
+import { Anchor } from "@barrelrolla/react-components-library";
 import PageContent from "../Page/PageContent";
 import { contacts } from "../../data/bio";
-import { motion } from "motion/react";
-import { MotionAnchor } from "../motion/motion";
 
 export default function Contacts() {
   return (
@@ -47,17 +47,16 @@ function Contact({ title, url, text }: ContactProps) {
       >
         {title + ": "}
       </motion.p>
-      <MotionAnchor
+      <motion.div
         variants={{
           hidden: { opacity: 0, translateY: 20 },
           visible: { opacity: 1, translateY: 0 },
         }}
-        className="w-fit"
-        href={url}
-        target="_blank"
       >
-        {text}
-      </MotionAnchor>
+        <Anchor href={url} target="_blank">
+          {text}
+        </Anchor>
+      </motion.div>
     </>
   );
 }
