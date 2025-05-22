@@ -7,6 +7,7 @@ import libraryLogo from "../assets/react_components_library_logo.png";
 import resumeLogo from "../assets/resume_logo.jpg";
 import resumeLogoDark from "../assets/resume_logo_dark.jpg";
 import nextLogo from "../assets/next_logo.svg";
+import udemyLogo from "../assets/udemy-logo.svg";
 
 import {
   GitHubIcon,
@@ -87,7 +88,8 @@ export const experienceData: BioDataType[] = [
     dates: "April 2017 - April 2018",
     website: "https://oldmelon.melontech.com/",
     bgColor: "#183f57",
-    imgClass: "scale-50 object-contain group-hover:scale-55 transition",
+    imgClass:
+      "scale-50 object-contain group-hover:scale-55 group-focus-visible:scale-55 transition",
   },
   {
     id: "ubisoft-tester",
@@ -106,6 +108,20 @@ export const experienceData: BioDataType[] = [
 
 export const educationData: BioDataType[] = [
   {
+    id: "udemy",
+    category: "education",
+    img: udemyLogo,
+    title: "Udemy",
+    description:
+      "Completed a variety of courses to expand and refine technical skills, including React, Tailwind and Unity 3D.",
+    fullInfo:
+      "Completed a variety of courses to expand and refine technical skills, including:<ol><li>React - The Complete Guide 2025 (incl. Next.js, Redux)</li><li>Tailwind CSS From Scratch | Learn By Building Projects</li><li>Complete C# Unity Game Developer 3D</li></ol>",
+    imgClass:
+      "w-full h-full scale-50 object-contain group-hover:scale-55 group-focus-visible:scale-55 transition py-10",
+    website: "https://www.udemy.com/",
+    bgColor: "#fff",
+  },
+  {
     id: "telerik",
     category: "education",
     img: telerikLogo,
@@ -116,7 +132,8 @@ export const educationData: BioDataType[] = [
     fullInfo:
       "Completed an intensive one-year program covering a wide range of development disciplines, including:<ol><li>Programming fundamentals using C#</li><li>Front-end web development with JavaScript</li><li>Back-end development with Node.js</li><li>Mobile applications for iOS and Android</li><li>Database design and management</li></ol>Graduated among the highest-performing students in the group.",
     dates: "2016 - 2017",
-    imgClass: "scale-90 object-contain group-hover:scale-100 transition py-14",
+    imgClass:
+      "scale-90 object-contain group-hover:scale-100 group-focus-visible:scale-100 transition py-14",
     website: "https://www.telerikacademy.com/",
     bgColor: "#fff",
   },
@@ -125,11 +142,14 @@ export const educationData: BioDataType[] = [
     category: "education",
     img: ibsLogo,
     title: "International Business School of Bulgaria",
-    description: "I studied international business relations.",
-    fullInfo: "I studied international business relations.",
+    description:
+      "Gained foundational knowledge in international economics, business and marketing.",
+    fullInfo:
+      "Gained foundational knowledge in international economics, business and marketing.",
     specialty: "Bachelor's degree in International Business Relations",
     dates: "2010 - 2014",
-    imgClass: "scale-90 object-contain group-hover:scale-100 transition py-14",
+    imgClass:
+      "scale-90 object-contain group-hover:scale-100 group-focus-visible:scale-100 transition py-14",
     website: "https://ibsedu.bg/",
     bgColor: "#fff",
   },
@@ -140,22 +160,28 @@ export const projectsData: BioDataType[] = [
     id: "next.js-project",
     category: "projects",
     img: nextLogo,
-    imgClass: "scale-50 object-contain group-hover:scale-55 transition py-20",
+    imgClass:
+      "scale-50 object-contain group-hover:scale-55 group-focus-visible:scale-55 transition py-20",
     bgColor: "#fff",
     title: "NextJS project",
-    description: "A NextJS I'm currently working on.",
-    fullInfo: "A NextJS I'm currently working on.",
+    description:
+      "A full-stack web application built with NextJS. Still under development.",
+    fullInfo:
+      "A full-stack web application built with NextJS.<ol><li>Focused on implementing complete Create, Read, Update, and Delete functionality</li><li>Implements user authentication.</li><li>Designed to explore the features of NextJS, including API routes and server-side rendering</li><li>Still under active development and not yet available",
+    dates: "under development",
   },
   {
     id: "react-components-library",
     category: "projects",
     img: libraryLogo,
     bgColor: "#1b1c1d",
-    imgClass: "object-cover transition scale-90 group-hover:scale-100",
+    imgClass:
+      "object-cover transition scale-90 group-hover:scale-100 group-focus-visible:scale-100",
     title: "React components library",
-    description: "A react components library I build for my personal projects.",
+    description:
+      "A highly customizable React component library, designed for reusability and rapid development for personal use.",
     fullInfo:
-      "A react components library I built for my personal projects. I'm still adding new components and improving it.",
+      "A highly customizable React component library, designed for reusability and rapid development.<ol><li>Includes a growing collection of UI components styled with Tailwind CSS</li><li>Features a custom Tailwind plugin</li><li>Continuously updated with new components</li></ol>",
     website: "https://barrelrolla.github.io/react-components-library/",
     github: "https://github.com/Barrelrolla/react-components-library",
   },
@@ -165,8 +191,10 @@ export const projectsData: BioDataType[] = [
     img: resumeLogoDark,
     imgDark: resumeLogo,
     title: "Personal resume",
-    description: "My personal resume website.",
-    fullInfo: "A personal resume website I built using my component library.",
+    description:
+      "A personal resume site showcasing projects, experience, and education. Built using my React component library.",
+    fullInfo:
+      "A personal resume site showcasing projects, experience, and education.<ol><li>Built using my React component library</li><li>Utilizes React Router for client-side navigation and Framer Motion for smooth animations</li><li>Designed with responsiveness and performance in mind</li></ol>",
     website: "https://julian-teofilov.vercel.app/",
     github: "https://github.com/Barrelrolla/personal-resume",
   },

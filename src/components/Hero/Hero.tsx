@@ -19,9 +19,9 @@ export default function Hero() {
       <HeroSection className="relative flex-1/2 items-center overflow-x-visible md:order-last">
         <Ring />
         <MotionHeroTitle
-          initial={{ opacity: 0, translateY: -300 }}
+          initial={{ opacity: 0, translateY: -200 }}
           animate={{ opacity: 1, translateY: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }}
           className="relative z-1 text-center text-5xl font-medium sm:text-6xl xl:text-8xl"
         >
           Julian
@@ -31,7 +31,7 @@ export default function Hero() {
         <motion.h2
           initial={{ opacity: 0, translateY: -20 }}
           animate={{ opacity: 1, translateY: 0 }}
-          transition={{ delay: 0.8 }}
+          transition={{ delay: 0.5 }}
           className="relative z-1 font-semibold sm:text-2xl xl:text-4xl"
         >
           UI Developer
@@ -41,7 +41,7 @@ export default function Hero() {
         className="flex-1/2 font-sans max-md:justify-start"
         initial={{ opacity: 0, translateX: -50 }}
         animate={{ opacity: 1, translateX: 0 }}
-        transition={{ delay: 1 }}
+        transition={{ delay: 0.7 }}
       >
         <p className="text-pretty">
           UI Developer with 8 years of experience in both front-end web

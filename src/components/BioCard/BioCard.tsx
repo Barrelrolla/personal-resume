@@ -69,7 +69,7 @@ export default function BioCard({
         >
           <CardSection className="flex-1/2 @lg:group-even/wrapper:order-last">
             <CardImageContainer
-              className="flex items-center"
+              className="flex items-center relative -z-10"
               style={{
                 backgroundColor: bgColor || "",
               }}
