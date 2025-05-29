@@ -14,7 +14,7 @@ export default function PageTitleWithDivider<H extends ElementType>({
   return (
     <>
       <PageTitle as={H}>{children}</PageTitle>
-      <Divider width={2} />
+      <Divider width={2} className="w-3/4" />
     </>
   );
 }
