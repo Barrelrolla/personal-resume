@@ -8,6 +8,7 @@ import resumeLogo from "../assets/resume_logo.jpg";
 import resumeLogoDark from "../assets/resume_logo_dark.jpg";
 import nextLogo from "../assets/next_logo.svg";
 import udemyLogo from "../assets/udemy-logo.svg";
+import tasksLogo from "../assets/tasks_manager_logo.webp";
 
 import {
   GitHubIcon,
@@ -167,8 +168,21 @@ export const projectsData: BioDataType[] = [
     description:
       "A full-stack web application built with NextJS. Still under development.",
     fullInfo:
-      "A full-stack web application built with NextJS.<ol><li>Focused on implementing complete Create, Read, Update, and Delete functionality</li><li>Implements user authentication.</li><li>Designed to explore the features of NextJS, including API routes and server-side rendering</li><li>Still under active development and not yet available",
+      "A full-stack web application built with NextJS.<ol><li>Designed to dive deeper into NextJS and become a fully functional web page</li><li>Still under active development and not yet available</li></ol>",
     dates: "under development",
+  },
+  {
+    id: "simple-tasks-manager",
+    category: "projects",
+    img: tasksLogo,
+    imgClass:
+      "bject-cover transition scale-90 mt-6 group-hover:scale-100 group-focus-visible:scale-100",
+    bgColor: "#1b2834",
+    title: "Simple Tasks Manager",
+    description:
+      "A simple full-stack NextJS kanban board. Designed to explore the features of NextJS",
+    fullInfo:
+      "A full-stack web application built with NextJS.<ol><li>Focused on implementing complete Create, Read, Update, and Delete functionality</li><li>Implements user authentication</li><li>Uses local storage if the user is not authenticated</li><li>Utilizes Drizzle for database schematics</li><li>Designed to explore the features of NextJS</li>",
   },
   {
     id: "react-components-library",
