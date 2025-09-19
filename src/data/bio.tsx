@@ -183,6 +183,8 @@ export const projectsData: BioDataType[] = [
       "A simple full-stack NextJS kanban board. Designed to explore the features of NextJS",
     fullInfo:
       "A full-stack web application built with NextJS.<ol><li>Focused on implementing complete Create, Read, Update, and Delete functionality</li><li>Implements user authentication</li><li>Uses local storage if the user is not authenticated</li><li>Utilizes Drizzle for database schematics</li><li>Designed to explore the features of NextJS</li>",
+    website: "https://simple-tasks-manager.vercel.app/",
+    github: "https://github.com/Barrelrolla/task-manager",
   },
   {
     id: "react-components-library",
