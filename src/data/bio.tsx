@@ -6,7 +6,7 @@ import ibsLogo from "../assets/ibs_logo.webp";
 import libraryLogo from "../assets/react_components_library_logo.png";
 import resumeLogo from "../assets/resume_logo.jpg";
 import resumeLogoDark from "../assets/resume_logo_dark.jpg";
-import nextLogo from "../assets/next_logo.svg";
+import garndishLogo from "../assets/garndish_logo.png";
 import udemyLogo from "../assets/udemy-logo.svg";
 import tasksLogo from "../assets/tasks_manager_logo.webp";
 
@@ -158,18 +158,20 @@ export const educationData: BioDataType[] = [
 
 export const projectsData: BioDataType[] = [
   {
-    id: "next.js-project",
+    id: "Garndish",
     category: "projects",
-    img: nextLogo,
+    img: garndishLogo,
     imgClass:
-      "scale-50 object-contain group-hover:scale-55 group-focus-visible:scale-55 transition py-20",
-    bgColor: "#fff",
-    title: "NextJS project",
+      "object-contain group-hover:scale-105 group-focus-visible:scale-105 transition py-20",
+    bgColor: "#221f19",
+    title: "Garndish",
     description:
       "A full-stack web application built with NextJS. Still under development.",
     fullInfo:
-      "A full-stack web application built with NextJS.<ol><li>Designed to dive deeper into NextJS and become a fully functional web page</li><li>Still under active development and not yet available</li></ol>",
+      "A full-stack web application, designed to dive deeper into NextJS and become a fully functional web page.<ol><li>Still under active development and not yet available</li><li>Postgres DB with Drizzle ORM</li><li>Authentication with Better Auth</li><li>Image uploading with Cloudinary</li><li>Docker for development DB</li></ol>",
     dates: "under development",
+    website: "https://www.garndish.com/",
+    github: "https://github.com/Barrelrolla/cook-it",
   },
   {
     id: "simple-tasks-manager",

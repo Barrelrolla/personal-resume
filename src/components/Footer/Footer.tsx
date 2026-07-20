@@ -9,8 +9,11 @@ import {
   HeartFillIcon,
 } from "@barrelrolla/react-components-library";
 import { contacts } from "../../data/bio";
+import { Link } from "react-router";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <BarrelrollaFooter color="main" decorations>
       <div className="flex w-full flex-wrap items-center justify-between pt-2">
@@ -40,17 +43,33 @@ export default function Footer() {
             phosphoricons
           </Anchor>
         </p>
+        <p>© {year} Julian Teofilov. All rights reserved.</p>
       </div>
       <FooterDivider />
-      <p>
-        This website uses Analytics from Vercel.{" "}
-        <Anchor
-          href="https://vercel.com/docs/analytics/privacy-policy"
-          target="_blank"
-        >
-          Privacy policy
-        </Anchor>
-      </p>
+      <div>
+        <h2 className="text-lg font-semibold">Privacy Policy</h2>
+        <p>This is a personal portfolio website hosted on Vercel.</p>
+      </div>
+      <ul>
+        <li>
+          <strong>Analytics:</strong> I use Vercel Web Analytics to track
+          aggregated, anonymous page views. It does not use cookies, does not
+          collect personal identifying information, and does not track you
+          across other websites.
+        </li>
+        <li>
+          <strong>Cookies:</strong> This site does not store tracking cookies on
+          your browser.
+        </li>
+        <li>
+          <strong>Contact:</strong> If you have any questions, you can reach out
+          at any of the listed{" "}
+          <Anchor as={Link} to={"/contacts"}>
+            contacts
+          </Anchor>
+          .
+        </li>
+      </ul>
     </BarrelrollaFooter>
   );
 }

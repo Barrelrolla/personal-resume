@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import "tailwindcss";
 @plugin "./plugin";
 @source "../node_modules/@barrelrolla/react-components-library/";
@@ -20,6 +20,9 @@
   scrollbar-gutter: stable;
   --ring-offset: 8px;
   --ring-blur: 20px;
+  --mod-highlight: 0.05;
+  --mod-highlight-primary: -0.05;
+  --mod-highlight-main: -0.05;
 }
 
 .dark {
@@ -27,13 +30,14 @@
   --color-main-content: #dad6cf;
   --color-primary: #4c5c5a;
   --color-primary-content: #dad6cf;
+  --mod-highlight: -0.05;
+  --mod-highlight-primary: 0.05;
+  --mod-highlight-main: 0.05;
 }
 
 @theme {
-  --font-sans: "Rubik",
-    sans-serif;
-  --font-serif: "Cinzel",
-    serif;
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cinzel", serif;
 }
 
 @media (width >=40rem) {
@@ -68,7 +72,7 @@
 }
 
 .height-hero {
-  @apply h-screen min-h-[400px] max-h-[1024px]
+  @apply h-screen max-h-[1024px] min-h-[400px];
 }
 
 .hero-ring {
@@ -87,15 +91,15 @@
 }
 
 .bio-container {
-  @apply mt-6 flex flex-col gap-6 items-end md:items-stretch;
+  @apply mt-6 flex flex-col items-end gap-6 md:items-stretch;
 }
 
-p>ol>li {
-  @apply list-disc list-inside my-4;
+p > ol > li {
+  @apply my-4 list-inside list-disc;
 }
 
 .animate-fade-out {
-  animation: fade-out 300ms linear forwards
+  animation: fade-out 300ms linear forwards;
 }
 
 @keyframes fade-out {
