@@ -20,8 +20,6 @@
   scrollbar-gutter: stable;
   --ring-offset: 8px;
   --ring-blur: 20px;
-  --mod-highlight: 0.05;
-  --mod-highlight-primary: -0.05;
   --mod-highlight-main: -0.05;
 }
 
@@ -30,8 +28,6 @@
   --color-main-content: #dad6cf;
   --color-primary: #4c5c5a;
   --color-primary-content: #dad6cf;
-  --mod-highlight: -0.05;
-  --mod-highlight-primary: 0.05;
   --mod-highlight-main: 0.05;
 }
 

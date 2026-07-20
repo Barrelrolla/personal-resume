@@ -1,4 +1,4 @@
-import { CSSProperties, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import {
   Card,
@@ -48,7 +48,7 @@ export default function BioCard({
 
   return (
     <motion.div
-      className="group/wrapper w-full flex flex-col"
+      className="group/wrapper flex w-full flex-col"
       variants={child}
       {...rest}
       viewport={{ amount: 0.3, once: true }}
@@ -63,13 +63,12 @@ export default function BioCard({
         <CardInteract
           as={Link}
           to={`/${category}/${id}`}
-          className="flex flex-col @xl:h-58 @xl:flex-row inset-ring"
+          className="flex flex-col inset-ring @xl:h-58 @xl:flex-row"
           aria-label={`${title} link`}
-          style={{ "--h": "calc(var(--mod-highlight) * -1)" } as CSSProperties}
         >
           <CardSection className="flex-1/2 @xl:group-even/wrapper:order-last">
             <CardImageContainer
-              className="flex items-center relative -z-10"
+              className="relative -z-10 flex items-center"
               style={{
                 backgroundColor: bgColor || "",
               }}
