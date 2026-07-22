@@ -7,7 +7,7 @@ import Projects from "../components/Content/Projects";
 import BasePage from "../components/Page/BasePage";
 import { motion } from "motion/react";
 import { HomePageContextProvider } from "../contexts.ts/HomaPageContext";
-import { PiCaretDown } from "react-icons/pi";
+import { PiCaretDownThin } from "react-icons/pi";
 
 export default function HomePage() {
   document.title = "Julian Teofilov";
@@ -60,7 +60,7 @@ export default function HomePage() {
               variant="outline"
               radius="pill"
               size="xl"
-              startIcon={<PiCaretDown />}
+              startIcon={<PiCaretDownThin strokeWidth={4} />}
               wrapperClasses="absolute bottom-4 motion-safe:animate-bounce left-[calc(50%-28px)]"
               onClick={() => {
                 buttonRef.current?.parentElement?.classList.add(
