@@ -5,7 +5,6 @@ import {
   Button,
   Card,
   CardImageContainer,
-  GitHubIcon,
   Spinner,
   useTheme,
 } from "@barrelrolla/react-components-library";
@@ -14,6 +13,7 @@ import { getBioData } from "../util/dataHelper";
 import { BioCategory, BioDataType } from "../data/bio";
 import NotFoundContent from "../components/Page/NotFoundContent";
 import { motion } from "motion/react";
+import { PiGithubLogoThin } from "react-icons/pi";
 
 export default function DetailsPage() {
   const [loading, setLoading] = useState(true);
@@ -76,14 +76,14 @@ export default function DetailsPage() {
               />
             </CardImageContainer>
           </Card>
-          <h2 className="text-2xl space font-medium">{data.title}</h2>
+          <h2 className="space text-2xl font-medium">{data.title}</h2>
           {data.specialty && (
-            <p className="font-normal pb-4">{data.specialty}</p>
+            <p className="pb-4 font-normal">{data.specialty}</p>
           )}
           {data.dates && <p>{data.dates}</p>}
           <p
             dangerouslySetInnerHTML={{ __html: data.fullInfo }}
-            className="my-5 max-w-[48rem] whitespace-pre-line list-disc"
+            className="my-5 max-w-[48rem] list-disc whitespace-pre-line"
           />
           {data.website && (
             <Anchor href={data.website} target="_blank">
@@ -96,7 +96,7 @@ export default function DetailsPage() {
               href={data.github}
               target="_blank"
               wrapperClasses="mt-2"
-              startIcon={<GitHubIcon strokeWidth={16} />}
+              startIcon={<PiGithubLogoThin strokeWidth={16} />}
             >
               Repo
             </Button>

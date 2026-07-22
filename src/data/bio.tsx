@@ -9,38 +9,37 @@ import resumeLogoDark from "../assets/resume_logo_dark.jpg";
 import garndishLogo from "../assets/garndish_logo.png";
 import udemyLogo from "../assets/udemy-logo.svg";
 import tasksLogo from "../assets/tasks_manager_logo.webp";
-
 import {
-  GitHubIcon,
-  LetterIcon,
-  LinkedInIcon,
-  PhoneIcon,
-} from "@barrelrolla/react-components-library";
+  PiEnvelopeThin,
+  PiGithubLogoThin,
+  PiLinkedinLogoThin,
+  PiPhoneThin,
+} from "react-icons/pi";
 
 export const contacts = [
   {
     title: "Github",
     url: "https://github.com/barrelrolla",
     text: "github.com/barrelrolla",
-    icon: GitHubIcon,
+    icon: PiGithubLogoThin,
   },
   {
     title: "LinkedIn",
     url: "https://www.linkedin.com/in/julian-teofilov/",
     text: "linkedin.com/in/julian-teofilov/",
-    icon: LinkedInIcon,
+    icon: PiLinkedinLogoThin,
   },
   {
     title: "Email",
     url: "mailto:julian.teofilov@gmail.com",
     text: "julian.teofilov@gmail.com",
-    icon: LetterIcon,
+    icon: PiEnvelopeThin,
   },
   {
     title: "Phone",
     url: "tel:+359888971167",
     text: "+359 888 971167",
-    icon: PhoneIcon,
+    icon: PiPhoneThin,
   },
 ];
 

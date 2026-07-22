@@ -1,15 +1,17 @@
 import {
   Anchor,
   Footer as BarrelrollaFooter,
-  CoffeeFillIcon,
   DarkModeSelector,
   FooterDivider,
   FooterIconsContainer,
   FooterLink,
-  HeartFillIcon,
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
 } from "@barrelrolla/react-components-library";
 import { contacts } from "../../data/bio";
 import { Link } from "react-router";
+import { PiCoffeeFill, PiHeartFill } from "react-icons/pi";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -21,21 +23,26 @@ export default function Footer() {
 
         <FooterIconsContainer>
           {contacts.map((contact) => (
-            <FooterLink
-              key={contact.title}
-              target="_blank"
-              aria-label={`${contact.title} link`}
-              href={contact.url}
-            >
-              <contact.icon strokeWidth={10} />
-            </FooterLink>
+            <Tooltip isLabel>
+              <TooltipTrigger>
+                <FooterLink
+                  key={contact.title}
+                  target="_blank"
+                  aria-label={`${contact.title} link`}
+                  href={contact.url}
+                >
+                  <contact.icon strokeWidth={10} />
+                </FooterLink>
+              </TooltipTrigger>
+              <TooltipContent>{contact.title}</TooltipContent>
+            </Tooltip>
           ))}
         </FooterIconsContainer>
       </div>
       <div className="flex w-full flex-col items-center text-center">
         <p className="flex items-center gap-1">
-          Made with <HeartFillIcon className="inline" /> and
-          <CoffeeFillIcon className="inline" />
+          Made with <PiHeartFill className="inline" /> and
+          <PiCoffeeFill className="inline" />
         </p>
         <p>
           Icons by:{" "}

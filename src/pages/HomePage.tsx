@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Button, CaretIcon } from "@barrelrolla/react-components-library";
+import { Button } from "@barrelrolla/react-components-library";
 import Experience from "../components/Content/Experience";
 import Hero from "../components/Hero/Hero";
 import Education from "../components/Content/Education";
@@ -7,6 +7,7 @@ import Projects from "../components/Content/Projects";
 import BasePage from "../components/Page/BasePage";
 import { motion } from "motion/react";
 import { HomePageContextProvider } from "../contexts.ts/HomaPageContext";
+import { PiCaretDown } from "react-icons/pi";
 
 export default function HomePage() {
   document.title = "Julian Teofilov";
@@ -59,7 +60,7 @@ export default function HomePage() {
               variant="outline"
               radius="pill"
               size="xl"
-              startIcon={<CaretIcon />}
+              startIcon={<PiCaretDown />}
               wrapperClasses="absolute bottom-4 motion-safe:animate-bounce left-[calc(50%-28px)]"
               onClick={() => {
                 buttonRef.current?.parentElement?.classList.add(
