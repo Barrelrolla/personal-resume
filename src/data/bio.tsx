@@ -161,7 +161,7 @@ export const projectsData: BioDataType[] = [
     category: "projects",
     img: garndishLogo,
     imgClass:
-      "object-contain group-hover:scale-105 group-focus-visible:scale-105 transition py-20",
+      "object-contain group-hover:scale-105 group-focus-visible:scale-105 transition",
     bgColor: "#221f19",
     title: "Garndish",
     description:

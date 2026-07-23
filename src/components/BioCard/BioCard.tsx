@@ -68,7 +68,7 @@ export default function BioCard({
         >
           <CardSection className="flex-1/2 @xl:group-even/wrapper:order-last">
             <CardImageContainer
-              className="relative -z-10 flex items-center"
+              className="relative -z-10 flex max-h-[260px] items-center"
               style={{
                 backgroundColor: bgColor || "",
               }}
