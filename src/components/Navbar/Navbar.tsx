@@ -13,6 +13,16 @@ import { MotionCollapse } from "../motion/motion";
 export default function Navbar() {
   const path = useLocation().pathname;
   const transition: Transition = { duration: 0.2 };
+
+  const handleHomeClick = () => {
+    if (path === "/") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <BarrelrollaNavbar collapseAt="md">
       <motion.div
@@ -21,7 +31,12 @@ export default function Navbar() {
         transition={transition}
         className="md:w-[130px]"
       >
-        <NavbarBrand as={Link} className="w-min font-medium" to={"/"}>
+        <NavbarBrand
+          as={Link}
+          className="w-min font-medium"
+          to={"/"}
+          onClick={handleHomeClick}
+        >
           Julian
         </NavbarBrand>
       </motion.div>
@@ -29,7 +44,7 @@ export default function Navbar() {
         initial={{ opacity: 0, translateY: -50 }}
         animate={{ opacity: 1, translateY: 0 }}
         transition={transition}
-        className="md:space-x-6 capitalize"
+        className="capitalize md:space-x-6"
       >
         {navLinks.map((link) => (
           <NavbarLink
