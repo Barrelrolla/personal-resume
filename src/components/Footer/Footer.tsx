@@ -23,10 +23,9 @@ export default function Footer() {
 
         <FooterIconsContainer>
           {contacts.map((contact) => (
-            <Tooltip isLabel>
+            <Tooltip isLabel key={contact.title}>
               <TooltipTrigger>
                 <FooterLink
-                  key={contact.title}
                   target="_blank"
                   aria-label={`${contact.title} link`}
                   href={contact.url}

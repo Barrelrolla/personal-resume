@@ -58,12 +58,12 @@ export default function BioCard({
         containerClasses="group-odd/wrapper:self-start group-even/wrapper:self-end border-none max-w-4xl overflow-clip rounded-(--radius-containers)"
         key={title}
         color="main"
-        className="h-full"
+        className="h-full overflow-clip rounded-(--radius-containers)"
       >
         <CardInteract
           as={Link}
           to={`/${category}/${id}`}
-          className="flex flex-col inset-ring @xl:h-58 @xl:flex-row"
+          className="flex flex-col overflow-clip rounded-(--radius-containers) inset-ring @xl:h-58 @xl:flex-row"
           aria-label={`${title} link`}
         >
           <CardSection className="flex-1/2 @xl:group-even/wrapper:order-last">
