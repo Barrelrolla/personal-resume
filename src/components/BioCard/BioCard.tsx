@@ -55,7 +55,7 @@ export default function BioCard({
       transition={{ duration: 0.3 }}
     >
       <Card
-        containerClasses="group-odd/wrapper:self-start group-even/wrapper:self-end border-none max-w-4xl"
+        containerClasses="group-odd/wrapper:self-start group-even/wrapper:self-end border-none max-w-4xl overflow-clip rounded-(--radius-containers)"
         key={title}
         color="main"
         className="h-full"
