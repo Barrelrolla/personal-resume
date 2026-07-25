@@ -20,7 +20,6 @@
   scrollbar-gutter: stable;
   --ring-offset: 8px;
   --ring-blur: 20px;
-  --mod-highlight-main: -0.05;
 }
 
 .dark {
@@ -28,7 +27,6 @@
   --color-main-content: #dad6cf;
   --color-primary: #4c5c5a;
   --color-primary-content: #dad6cf;
-  --mod-highlight-main: 0.05;
 }
 
 @theme {

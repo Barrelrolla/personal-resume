@@ -56,6 +56,7 @@ export default function BioCard({
     >
       <Card
         containerClasses="group-odd/wrapper:self-start group-even/wrapper:self-end border-none max-w-4xl overflow-clip rounded-(--radius-containers)"
+        horizontal
         key={title}
         color="main"
         className="h-full overflow-clip rounded-(--radius-containers)"
