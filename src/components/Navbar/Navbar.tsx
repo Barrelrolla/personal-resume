@@ -3,6 +3,7 @@ import {
   Navbar as BarrelrollaNavbar,
   Button,
   NavbarBrand,
+  NavbarMenu,
   NavbarLink,
   NavbarToggle,
 } from "@barrelrolla/react-components-library";
@@ -46,16 +47,18 @@ export default function Navbar() {
         transition={transition}
         className="capitalize md:space-x-6"
       >
-        {navLinks.map((link) => (
-          <NavbarLink
-            key={link.path}
-            as={Link}
-            to={`/${link.path}`}
-            data-selected={path.includes(`/${link.path}`)}
-          >
-            {link.path}
-          </NavbarLink>
-        ))}
+        <NavbarMenu>
+          {navLinks.map((link) => (
+            <NavbarLink
+              key={link.path}
+              as={Link}
+              to={`/${link.path}`}
+              data-selected={path.includes(`/${link.path}`)}
+            >
+              {link.path}
+            </NavbarLink>
+          ))}
+        </NavbarMenu>
       </MotionCollapse>
       <motion.div
         initial={{ opacity: 0, translateX: 100 }}
