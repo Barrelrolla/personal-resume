@@ -65,7 +65,7 @@ export default function DetailsPage() {
           animate={{ opacity: 1, translateY: 0 }}
           className="mt-6 flex flex-col items-center"
         >
-          <Card containerClasses="border-transparent mb-6">
+          <Card containerClassName="border-transparent mb-6">
             <CardImageContainer
               style={{ backgroundColor: data.bgColor || "#000" }}
             >
@@ -95,7 +95,7 @@ export default function DetailsPage() {
               as="a"
               href={data.github}
               target="_blank"
-              wrapperClasses="mt-2"
+              wrapperClassName="mt-2"
               startIcon={<PiGithubLogoThin strokeWidth={16} />}
             >
               Repo

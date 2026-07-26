@@ -61,7 +61,7 @@ export default function HomePage() {
               radius="pill"
               size="xl"
               startIcon={<PiCaretDownThin strokeWidth={4} />}
-              wrapperClasses="absolute bottom-4 motion-safe:animate-bounce left-[calc(50%-28px)]"
+              wrapperClassName="absolute bottom-4 motion-safe:animate-bounce left-[calc(50%-28px)]"
               onClick={() => {
                 buttonRef.current?.parentElement?.classList.add(
                   "animate-fade-out",

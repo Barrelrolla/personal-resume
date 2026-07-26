@@ -12,7 +12,7 @@ import { motion } from "motion/react";
 export default function Hero() {
   return (
     <BarrelrollaHero
-      wrapperClasses="overflow-visible"
+      wrapperClassName="overflow-visible"
       className="height-hero -mt-14 gap-6 font-serif"
       textAlign="responsive"
     >
