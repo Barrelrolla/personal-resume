@@ -10,17 +10,26 @@ import {
   TooltipTrigger,
 } from "@barrelrolla/react-components-library";
 import { contacts } from "../../data/bio";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { PiCoffeeFill, PiHeartFill } from "react-icons/pi";
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const path = useLocation().pathname;
+
+  const handleContactsClick = () => {
+    if (path === "/contacts") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <BarrelrollaFooter color="main" decorations>
       <div className="flex w-full flex-wrap items-center justify-between pt-2">
         <DarkModeSelector />
-
         <FooterIconsContainer>
           {contacts.map((contact) => (
             <Tooltip isLabel key={contact.title}>
@@ -70,7 +79,7 @@ export default function Footer() {
         <li>
           <strong>Contact:</strong> If you have any questions, you can reach out
           at any of the listed{" "}
-          <Anchor as={Link} to={"/contacts"}>
+          <Anchor as={Link} to={"/contacts"} onClick={handleContactsClick}>
             contacts
           </Anchor>
           .

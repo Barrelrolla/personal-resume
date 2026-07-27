@@ -1,7 +1,7 @@
 import { motion, Variants } from "motion/react";
 import BioCard from "../BioCard/BioCard";
 import PageContent from "../Page/PageContent";
-import { useHomePageContext } from "../../contexts.ts/HomaPageContext";
+import { useHomePageContext } from "../../contexts/HomaPageContext";
 import { BioDataType } from "../../data/bio";
 
 type BioContentProps = {

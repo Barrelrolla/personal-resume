@@ -6,7 +6,7 @@ import Education from "../components/Content/Education";
 import Projects from "../components/Content/Projects";
 import BasePage from "../components/Page/BasePage";
 import { motion } from "motion/react";
-import { HomePageContextProvider } from "../contexts.ts/HomaPageContext";
+import { HomePageContextProvider } from "../contexts/HomaPageContext";
 import { PiCaretDownThin } from "react-icons/pi";
 
 export default function HomePage() {
